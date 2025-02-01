@@ -1,0 +1,12 @@
+.navbar {
+    background-color: white; /* White background */
+    height: 144px; /* Height set to 144px */
+    display: flex;
+    align-items: center;
+    padding: 0 20px; /* Optional padding for spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
+    position: sticky; /* Keeps navbar on top */
+    top: 0;
+    z-index: 100; /* Ensures it stays above other elements */
+  }
+  
