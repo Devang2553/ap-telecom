@@ -7,7 +7,6 @@ import { PhoneIcon } from "../../assets/PhoneIcon";
 import ServiceBG from "../../assets/secBG.jpeg";
 import { ShippingIcon } from "../../assets/ShippingIcon";
 import { HeroSection } from "../../component/mainSection";
-import { Navbar } from "../../component/navbar";
 
 const ContactUsPage = () => {
   const data = [
@@ -15,21 +14,21 @@ const ContactUsPage = () => {
       id: 1,
       icon: <AddressIcon />,
       title: "Address",
-      decription: `  234 Hai Trieu, Ho Chi Minh City,\n Viet Nam`,
+      description: `  234 Hai Trieu, Ho Chi Minh City,\n Viet Nam`,
     },
     {
       id: 2,
       icon: <PhoneIcon />,
       title: "Contact Us",
 
-      decription: "+84 234 567 890",
+      description: "+84 234 567 890",
     },
     {
       id: 3,
       icon: <EmailIcon />,
       title: "Email",
 
-      decription: "hello@3legant.com",
+      description: "hello@3legant.com",
     },
   ];
   const data2 = [
@@ -37,28 +36,28 @@ const ContactUsPage = () => {
       id: 1,
       icon: <ShippingIcon />,
       title: "Free Shipping",
-      decription: `Order above $200`,
+      description: `Order above $200`,
     },
     {
       id: 2,
       icon: <MoneyBackIcon />,
       title: "Money-back",
 
-      decription: "30 days guarantee",
+      description: "30 days guarantee",
     },
     {
       id: 3,
       icon: <LockIcon />,
       title: "Secure Payments",
 
-      decription: "Secured by Stripe",
+      description: "Secured by Stripe",
     },
     {
       id: 4,
       icon: <PhoneIcon color="black" size="25" />,
       title: "24/7 Support",
 
-      decription: "Phone and Email support",
+      description: "Phone and Email support",
     },
   ];
 
@@ -120,7 +119,7 @@ const ContactUsPage = () => {
                 <h2 className="  text-[#0A5EB0] font-bold">
                   {x.title.toLocaleUpperCase()}
                 </h2>
-                <p className="text-center">{x.decription}</p>
+                <p className="text-center">{x.description}</p>
               </div>
             ))}
           </div>
@@ -187,7 +186,7 @@ const ContactUsPage = () => {
                 {x.icon}
                 <h2 className="font-medium">{x.title}</h2>
                 <p className="text-center text-[#6C7275] text-sm">
-                  {x.decription}
+                  {x.description}
                 </p>
               </div>
             ))}

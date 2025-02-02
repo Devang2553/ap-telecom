@@ -1,4 +1,3 @@
-import React from "react";
 import PartnersImage from "../../assets/partners.png";
 export const Partners = () => {
   return (

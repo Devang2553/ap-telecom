@@ -1,11 +1,10 @@
-import React from "react";
-import { Partners } from "../../component/partners";
-import AboutUsPage from "../../component/about";
-import OurService from "../../component/service";
-import Testimonial from "../../component/testimonial";
 import { CloudIcon } from "../../assets/CloudIcon";
 import { MobileBgIcon } from "../../assets/MobileBgIcon";
 import MobileImage from "../../assets/mobile.png";
+import AboutUsPage from "../../component/about";
+import { Partners } from "../../component/partners";
+import OurService from "../../component/service";
+import Testimonial from "../../component/testimonial";
 
 const HomePage = () => {
   return (

@@ -1,8 +1,7 @@
-import React from "react";
-import "./style.css";
+import { useLocation } from "react-router-dom";
 import { LogoIcon } from "../../assets/logo";
 import { PhoneIcon } from "../../assets/PhoneIcon";
-import { useLocation } from "react-router-dom";
+import "./style.css";
 
 export const Navbar = () => {
   const listArray = [
@@ -33,8 +32,8 @@ export const Navbar = () => {
     },
   ];
 
-  const location=useLocation()
-  console.log(location.pathname,"location")
+  const location = useLocation();
+  console.log(location.pathname, "location");
   return (
     <div
       className="navbar "
@@ -60,7 +59,9 @@ export const Navbar = () => {
           <a
             key={x.id}
             href={x.href}
-            className={`${location.pathname==x.href?"text-[#0A5EB0]":""} hover:text-[#0A5EB0]  duration-200 cursor-pointer`}
+            className={`${
+              location.pathname == x.href ? "text-[#0A5EB0]" : ""
+            } hover:text-[#0A5EB0]  duration-200 cursor-pointer`}
           >
             {x.title}
           </a>
