@@ -122,16 +122,16 @@ const OurService = () => {
 
   const [selectedTab, setSelectedTab] = useState(1);
   return (
-    <div className="flex flex-col items-center justify-center h-fit">
+    <div className="flex flex-col items-center justify-center h-fit px-5 md:px-0">
       <div className="h-[63px] border-b-2 border-[#0A5EB0] mb-3">
         <h1 className="font-extrabold text-4xl">Our Service</h1>
       </div>
-      <div className="bg-[#EBF6FF] w-fit h-[60px] flex items-center justify-center  px-5 rounded">
+      <div className="bg-[#EBF6FF] w-fit h-[60px] flex items-center justify-center mt-5 md:mt-0  md:px-5 rounded">
         <h2
           onClick={() => handleSelectTab(1)}
           className={`${
             selectedTab == 1 ? "bg-[#0A5EB0] text-white rounded" : ""
-          } p-2 w-full cursor-pointer `}
+          } p-2 w-full cursor-pointer text-center md:text-left`}
         >
           Telecommunication Services
         </h2>
@@ -139,11 +139,13 @@ const OurService = () => {
           onClick={() => handleSelectTab(2)}
           className={`${
             selectedTab == 2 ? "bg-[#0A5EB0] text-white rounded" : ""
-          } p-2 w-full cursor-pointer whitespace-nowrap pl-4 `}
+          } p-2 w-full cursor-pointer md:whitespace-nowrap pl-4  text-center md:text-left`}
         >
           Security Alarm and CCTV Services
         </h2>
       </div>
+      <div className="mt-12">
+
       {(selectedTab == 1 ? serviceArray1 : serviceArray2)?.map((x) => (
         <ServiceCard
           key={x.id}
@@ -155,6 +157,7 @@ const OurService = () => {
           reverse={x.reverse}
         />
       ))}
+      </div>
     </div>
   );
 };

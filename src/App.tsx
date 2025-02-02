@@ -19,7 +19,7 @@ function App() {
   const [isopen, setIsopen] = useState(true);
   return (
     <Router>
-      <Navbar  isopen={isopen} setIsopen={setIsopen}/>
+      <Navbar isopen={isopen} setIsopen={setIsopen} />
       <Routes>
         <Route path="/" element={<HomePage />} />
         {/* <Route path="/" element={<ServicePage />} /> */}

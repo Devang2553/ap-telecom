@@ -9,16 +9,16 @@ import Testimonial from "../../component/testimonial";
 const HomePage = () => {
   return (
     <>
-      <div className="h-full relative  bg-[#0A5EB0]    pt-10">
-        <div className="  relative ">
-          <section className="flex  justify-between ">
-            <div className="left-side ml-20 mt-20">
-              <h1 className="font-black text-white text-[40px]">
+      <div className="h-full relative  bg-[#0A5EB0]    pt-10  ">
+        <div className="  relative  ">
+          <section className="md:flex  justify-between ">
+            <div className="left-side md:ml-20 mt-32 md:mt-20 px-7 md:px-0">
+              <h1 className="font-black text-white text-[24px] text-center md:text-left md:text-[30px]">
                 Welcome to AP Telecom Pty Ltd <br />
                 Your Trusted Partner for Telecommunication <br /> and Security
                 Solutions.
               </h1>
-              <p className="text-white mt-[20px] max-w-[80%]">
+              <p className="text-white mt-[20px] md:max-w-[80%]">
                 {" "}
                 At AP Telecom Pty Ltd, we specialize in providing cutting-edge
                 telecommunication and security services tailored to your needs.
@@ -26,25 +26,25 @@ const HomePage = () => {
                 deliver solutions that keep you connected and secure, whether at
                 home or in the workplace.
               </p>
-              <p className="text-white mt-[20px] max-w-[80%]">
+              <p className="text-white mt-[20px] md:max-w-[80%]">
                 Experience seamless connectivity and enhanced security with our
                 professional services. Contact us today for a consultation.
               </p>
             </div>
             <div className="right-side relative min-w-[439px]   ">
-              <div>
+              {/* <div>
                 <img src={MobileImage} className=" " />
-              </div>
-              <div className="absolute -bottom-20 -left-24">
+              </div> */}
+              {/* <div className="absolute -bottom-20 -left-24">
                 <MobileBgIcon />
-              </div>
+              </div> */}
             </div>
           </section>
-          <div className="overflow-x-hidden  ">
+          {/* <div className="overflow-x-hidden  ">
             <div className="pt-20  ">
               <CloudIcon />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div>
