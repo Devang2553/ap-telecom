@@ -64,7 +64,7 @@ const AboutPage = () => {
       <HeroSection
         backgroundImage={ServiceBG}
         subtitle="Home ideas and design inspiration"
-        title="Our Service"
+        title="About us"
       />
       <div className="my-0">
         <AboutUsPage />

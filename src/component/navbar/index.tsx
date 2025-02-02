@@ -1,9 +1,14 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { LogoIcon } from "../../assets/logo";
 import { PhoneIcon } from "../../assets/PhoneIcon";
 import "./style.css";
-
-export const Navbar = () => {
+import { Hamburger } from "../../assets/Hamburger";
+import { CloseIcon } from "../../assets/CloseIcon";
+interface NavbarType {
+  isopen: boolean;
+  setIsopen: any;
+}
+export const Navbar: React.FC<NavbarType> = ({ isopen, setIsopen }) => {
   const listArray = [
     {
       id: 1,
@@ -33,7 +38,11 @@ export const Navbar = () => {
   ];
 
   const location = useLocation();
-  console.log(location.pathname, "location");
+  const navigate = useNavigate();
+
+  const HandleNav = () => {
+    setIsopen(!isopen);
+  };
   return (
     <div
       className="navbar "
@@ -45,15 +54,28 @@ export const Navbar = () => {
         justifyContent: "space-between",
       }}
     >
-      <div className="logo">
+      <div className="md:hidden">
+        {!isopen ? (
+          <div onClick={HandleNav}>
+            <Hamburger />
+          </div>
+        ) : (
+          <div onClick={HandleNav}>
+            <CloseIcon />
+          </div>
+        )}
+      </div>
+      <div
+        className="logo cursor-pointer hidden md:block"
+        onClick={() => {
+          navigate("/");
+        }}
+      >
         <LogoIcon />
       </div>
       <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "60px",
-        }}
+      className="hidden md:flex items-center  gap-14"
+      
       >
         {listArray?.map((x) => (
           <a

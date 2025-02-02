@@ -9,9 +9,9 @@ import Testimonial from "../../component/testimonial";
 const HomePage = () => {
   return (
     <>
-      <div className="h-full relative overflow-x-hidden bg-[#0A5EB0]">
+      <div className="h-full relative  bg-[#0A5EB0]    pt-10">
         <div className="  relative ">
-          <section className="flex  justify-between mt-20">
+          <section className="flex  justify-between ">
             <div className="left-side ml-20 mt-20">
               <h1 className="font-black text-white text-[40px]">
                 Welcome to AP Telecom Pty Ltd <br />
@@ -40,10 +40,10 @@ const HomePage = () => {
               </div>
             </div>
           </section>
-        </div>
-        <div className="relative h-full  ">
-          <div className="absolute  left-[-100px]   pt-20 ">
-            <CloudIcon />
+          <div className="overflow-x-hidden  ">
+            <div className="pt-20  ">
+              <CloudIcon />
+            </div>
           </div>
         </div>
       </div>

@@ -13,11 +13,13 @@ import HomePage from "./pages/homePage";
 import OurServicePage from "./pages/ourService";
 import TestimonialPage from "./pages/testimonial";
 import AboutPage from "./pages/about";
+import { useState } from "react";
 
 function App() {
+  const [isopen, setIsopen] = useState(true);
   return (
     <Router>
-      <Navbar />
+      <Navbar  isopen={isopen} setIsopen={setIsopen}/>
       <Routes>
         <Route path="/" element={<HomePage />} />
         {/* <Route path="/" element={<ServicePage />} /> */}
