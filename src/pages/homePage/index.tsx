@@ -1,39 +1,17 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import "./App.css";
-import { CloudIcon } from "./assets/CloudIcon";
-import MobileImage from "./assets/mobile.png";
-import { MobileBgIcon } from "./assets/MobileBgIcon";
-import AboutUsPage from "./component/about";
-import { Navbar } from "./component/navbar";
-import { Partners } from "./component/partners";
-import OurService from "./component/service";
-import Testimonial from "./component/testimonial";
-import ContactUsPage from "./pages/contactUs";
-import HomePage from "./pages/homePage";
-import OurServicePage from "./pages/ourService";
-import TestimonialPage from "./pages/testimonial";
-import AboutPage from "./pages/about";
+import React from "react";
+import { Partners } from "../../component/partners";
+import AboutUsPage from "../../component/about";
+import OurService from "../../component/service";
+import Testimonial from "../../component/testimonial";
+import { CloudIcon } from "../../assets/CloudIcon";
+import { MobileBgIcon } from "../../assets/MobileBgIcon";
+import MobileImage from "../../assets/mobile.png";
 
-function App() {
-  return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        {/* <Route path="/" element={<ServicePage />} /> */}
-        <Route path="/testimonials" element={<TestimonialPage />} />
-        <Route path="/contact" element={<ContactUsPage />} />
-        <Route path="/our-services" element={<OurServicePage />} />
-        <Route path="/about-us" element={<AboutPage />} />
-      </Routes>
-    </Router>
-  );
-
+const HomePage = () => {
   return (
     <>
       <div className="h-full relative overflow-x-hidden bg-[#0A5EB0]">
         <div className="  relative ">
-          <Navbar />
           <section className="flex  justify-between mt-20">
             <div className="left-side ml-20 mt-20">
               <h1 className="font-black text-white text-[40px]">
@@ -84,6 +62,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
-export default App;
+export default HomePage;

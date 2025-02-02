@@ -13,7 +13,7 @@ const AboutUsPage = () => {
             At Muhiris, we believe in the power of community and creativity
           </p>
         </div>
-        <div className=" px-20 flex items-start justify-between w-full my-16 ">
+        <div className=" px-20 flex items-start justify-between w-full mt-16 ">
           <div className="left flex flex-col gap-10 mt-11">
             <h1 className="font-bold text-[40px]">Who We Are</h1>
             <p className="w-[80%]">
