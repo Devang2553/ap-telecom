@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { LogoIcon } from "../../assets/logo";
 import { PhoneIcon } from "../../assets/PhoneIcon";
 import "./style.css";
@@ -55,7 +55,7 @@ export const Navbar: React.FC<NavbarType> = ({ isopen, setIsopen }) => {
       }}
     >
       <div className="md:hidden">
-        {!isopen ? (
+        {isopen ? (
           <div onClick={HandleNav}>
             <Hamburger />
           </div>
@@ -106,6 +106,40 @@ export const Navbar: React.FC<NavbarType> = ({ isopen, setIsopen }) => {
       >
         <PhoneIcon /> Call
       </button>
+
+
+      {!isopen && (
+        <div>
+          <ul className="fixed   w-full flex md:hidden flex-col  md:pt-5  py-5 h-screen top-0  pt-[40%]  left-0  bg-[#0A5EB0]  items-center gap-5 z-50">
+
+            {listArray.map((x, index) => (
+              <Link
+                onClick={() => setIsopen(true)}
+                key={x.id}
+                to={x.href}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                <li
+                  className={`text-center cursor-pointer py-1 text-white font-semibold pb-3 text-2xl md:text-base duration-300 w-full ${
+                    index !== listArray.length - 1 ? "border-b" : ""
+                  }`}
+                >
+                  {" "}
+                  {x.title}
+                </li>
+              </Link>
+            ))}
+            <div className="absolute top-10 left-5">
+              <div onClick={() => setIsopen(true)}>
+                <CloseIcon />
+              </div>
+            </div>
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

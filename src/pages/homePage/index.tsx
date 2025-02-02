@@ -1,4 +1,3 @@
-import { CloudIcon } from "../../assets/CloudIcon";
 import { MobileBgIcon } from "../../assets/MobileBgIcon";
 import MobileImage from "../../assets/mobile.png";
 import AboutUsPage from "../../component/about";
@@ -31,20 +30,17 @@ const HomePage = () => {
                 professional services. Contact us today for a consultation.
               </p>
             </div>
-            <div className="right-side relative min-w-[439px]   ">
-              {/* <div>
+            <div className="right-side relative md:min-w-[439px] flex items-center justify-center md:block mt-10 md:mt-0  ">
+              <div className="">
                 <img src={MobileImage} className=" " />
-              </div> */}
-              {/* <div className="absolute -bottom-20 -left-24">
-                <MobileBgIcon />
-              </div> */}
+              </div>
+              <div className="absolute -bottom-32 md:-bottom-20  md:-left-24">
+                <div className="flex items-center justify-center mx-auto  md:w-full w-[80%]">
+                  <MobileBgIcon />
+                </div>
+              </div>
             </div>
           </section>
-          {/* <div className="overflow-x-hidden  ">
-            <div className="pt-20  ">
-              <CloudIcon />
-            </div>
-          </div> */}
         </div>
       </div>
       <div>
