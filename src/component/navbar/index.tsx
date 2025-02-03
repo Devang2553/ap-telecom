@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { LogoIcon } from "../../assets/logo";
+import { LogoIcon } from "../../assets/LogoIcon";
 import { PhoneIcon } from "../../assets/PhoneIcon";
 import "./style.css";
 import { Hamburger } from "../../assets/Hamburger";
@@ -61,7 +61,7 @@ export const Navbar: React.FC<NavbarType> = ({ isopen, setIsopen }) => {
           </div>
         ) : (
           <div onClick={HandleNav}>
-            <CloseIcon  />
+            <CloseIcon />
           </div>
         )}
       </div>
@@ -73,10 +73,7 @@ export const Navbar: React.FC<NavbarType> = ({ isopen, setIsopen }) => {
       >
         <LogoIcon />
       </div>
-      <div
-      className="hidden md:flex items-center  gap-14"
-      
-      >
+      <div className="hidden md:flex items-center  gap-14">
         {listArray?.map((x) => (
           <a
             key={x.id}
@@ -107,11 +104,9 @@ export const Navbar: React.FC<NavbarType> = ({ isopen, setIsopen }) => {
         <PhoneIcon /> Call
       </button>
 
-
       {!isopen && (
         <div>
           <ul className="fixed   w-full flex md:hidden flex-col  md:pt-5  py-5 h-screen top-0  pt-[40%]  left-0  bg-[#0A5EB0]  items-center gap-5 z-50">
-
             {listArray.map((x, index) => (
               <Link
                 onClick={() => setIsopen(true)}

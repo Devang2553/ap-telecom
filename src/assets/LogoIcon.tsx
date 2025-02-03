@@ -1,6 +1,7 @@
-export const LogoIcon = () => {
+export const LogoIcon = ({className}:{className?:string}) => {
   return (
     <svg
+    className={className}
       width="266"
       height="76"
       viewBox="0 0 266 76"

@@ -3,8 +3,8 @@ import PartnersImage from "../../assets/partners.png";
 export const Partners = () => {
   return (
     <div>
-      <div className="overflow-x-hidden  bg-[#0A5EB0] ">
-        <div className="pt-20  ">
+      <div className="overflow-x-hidden    bg-[#0A5EB0] ">
+        <div className="pt-20   ">
           <CloudIcon />
         </div>
       </div>

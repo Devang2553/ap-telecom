@@ -145,18 +145,18 @@ const OurService = () => {
         </h2>
       </div>
       <div className="mt-12">
-
-      {(selectedTab == 1 ? serviceArray1 : serviceArray2)?.map((x) => (
-        <ServiceCard
-          key={x.id}
-          image={x.image}
-          statsNumber={`${x.years}+`}
-          statsText={`Years Of\nExperience`}
-          title={x.title}
-          description={x.description}
-          reverse={x.reverse}
-        />
-      ))}
+        
+        {(selectedTab == 1 ? serviceArray1 : serviceArray2)?.map((x) => (
+          <ServiceCard
+            key={x.id}
+            image={x.image}
+            statsNumber={`${x.years}+`}
+            statsText={`Years Of\nExperience`}
+            title={x.title}
+            description={x.description}
+            reverse={x.reverse}
+          />
+        ))}
       </div>
     </div>
   );
