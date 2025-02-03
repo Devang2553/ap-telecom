@@ -1,6 +1,7 @@
 import { MobileBgIcon } from "../../assets/MobileBgIcon";
 import MobileImage from "../../assets/mobile.png";
 import AboutUsPage from "../../component/about";
+import TsParticlesComponent from "../../component/particals/Partical";
 import { Partners } from "../../component/partners";
 import OurService from "../../component/service";
 import Testimonial from "../../component/testimonial";

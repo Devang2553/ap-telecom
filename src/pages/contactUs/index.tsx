@@ -104,12 +104,12 @@ const ContactUsPage = () => {
       />
 
       {/* Services Section */}
-      <div className="mt-[10px]">
+      <div className="mt-[10px] ">
         <div>
           <h1 className="text-[40px] font-bold text-center mb-10">
             Contact Us
           </h1>
-          <div className="flex items-center justify-between w-full px-5 gap-5">
+          <div className="flex flex-col md:flex-row items-center justify-between md:w-full  md:px-5 gap-5">
             {data.map((x) => (
               <div
                 key={x.id}
@@ -123,10 +123,10 @@ const ContactUsPage = () => {
               </div>
             ))}
           </div>
-          <div className="mt-10 flex  items-center justify-between px-10">
-            <div className="w-[48%]">
+          <div className="mt-10 flex flex-col md:flex-row  items-center justify-between px-7 md:px-10 ">
+            <div className="md:w-[48%] w-full">
               <form action="POST">
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-3 ">
                   <h2 className="text-[#6C7275]  font-bold text-xs">
                     FULL NAME
                   </h2>
@@ -136,7 +136,7 @@ const ContactUsPage = () => {
                     placeholder="Your Name"
                   />
                 </div>
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-3 mt-5 md:mt-0">
                   <h2 className="text-[#6C7275]  font-bold text-xs">
                     EMAIL ADDRESS
                   </h2>
@@ -146,7 +146,7 @@ const ContactUsPage = () => {
                     placeholder="Your Email"
                   />
                 </div>
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-3 mt-5 md:mt-0">
                   <h2 className="text-[#6C7275]  font-bold text-xs">MESSAGE</h2>
                   <textarea
                     rows={5}
@@ -157,7 +157,7 @@ const ContactUsPage = () => {
                 </div>
                 <div>
                   <button
-                    className="bg-[#0A5EB0] text-white  rounded-lg mt-10"
+                    className="bg-[#0A5EB0] text-white w-full md:w-fit   rounded-lg mt-10"
                     style={{ padding: "6px 40px" }}
                   >
                     Send Message
@@ -165,7 +165,7 @@ const ContactUsPage = () => {
                 </div>
               </form>
             </div>
-            <div style={{ width: "48%", height: "400px" }}>
+            <div className="mt-10 w-full md:w-[48%] h-[400px]">
               <iframe
                 width="100%"
                 height="100%"
@@ -177,11 +177,11 @@ const ContactUsPage = () => {
               ></iframe>
             </div>
           </div>
-          <div className="flex items-center justify-between w-full px-5 gap-5 my-12">
+          <div className="flex flex-col md:flex-row items-center justify-between w-full px-5 gap-5 my-12">
             {data2.map((x) => (
               <div
                 key={x.id}
-                className="bg-[#F3F5F7] min-w-[262px]  h-56 flex flex-col items-start pl-5 gap-3 justify-center"
+                className="bg-[#F3F5F7] w-full md:min-w-[262px]  h-56 flex flex-col items-center md:items-start md:pl-5 gap-3 justify-center"
               >
                 {x.icon}
                 <h2 className="font-medium">{x.title}</h2>

@@ -61,7 +61,7 @@ export const Navbar: React.FC<NavbarType> = ({ isopen, setIsopen }) => {
           </div>
         ) : (
           <div onClick={HandleNav}>
-            <CloseIcon />
+            <CloseIcon  />
           </div>
         )}
       </div>

@@ -8,6 +8,7 @@ export const CloseIcon: React.FC<CloseIconType> = () => {
       height="30"
       viewBox="0 -960 960 960"
       width="30"
+      fill="white"
     >
       <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
     </svg>
