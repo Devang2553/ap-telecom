@@ -117,10 +117,10 @@ export const Navbar: React.FC<NavbarType> = ({ isopen, setIsopen }) => {
                 onClick={() => setIsopen(true)}
                 key={x.id}
                 to={x.href}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
+                // spy={true}
+                // smooth={true}
+                // offset={-70}
+                // duration={500}
               >
                 <li
                   className={`text-center cursor-pointer py-1 text-white font-semibold pb-3 text-2xl md:text-base duration-300 w-full ${
