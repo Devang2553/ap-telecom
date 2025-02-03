@@ -34,8 +34,8 @@ const HomePage = () => {
               <div className="">
                 <img src={MobileImage} className=" " />
               </div>
-              <div className="absolute -bottom-32 md:-bottom-20  md:-left-24">
-                <div className="flex items-center justify-center mx-auto  md:w-full w-[80%]">
+              <div className="absolute -bottom-32 md:-bottom-20  left-10  md:-left-24 ">
+                <div className="flex items-center justify-center mx-auto  md:w-full w-[350px]">
                   <MobileBgIcon />
                 </div>
               </div>
