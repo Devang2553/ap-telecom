@@ -1,17 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import QuoteIcon from "/Quote.png"
-import QuoteIcon2 from "/Quote2.png"
+import QuoteIcon from "/Quote.png";
+import QuoteIcon2 from "/Quote2.png";
 
-
-
-
-const TestimonialSlider = ({ testimonials  } : any) => {
-
-  const swiperRef:any = useRef(null);
+const TestimonialSlider = ({ testimonials }: any) => {
+  const swiperRef: any = useRef(null);
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
 
   useEffect(() => {
     if (swiperRef.current) {
@@ -34,7 +32,14 @@ const TestimonialSlider = ({ testimonials  } : any) => {
           navigation={{
             nextEl: ".custom-swiper-button-next",
             prevEl: ".custom-swiper-button-prev",
-            
+          }}
+          onSwiper={(swiper) => {
+            setIsBeginning(swiper.isBeginning);
+            setIsEnd(swiper.isEnd);
+          }}
+          onSlideChange={(swiper) => {
+            setIsBeginning(swiper.isBeginning);
+            setIsEnd(swiper.isEnd);
           }}
           modules={[Navigation]}
           breakpoints={{
@@ -44,38 +49,35 @@ const TestimonialSlider = ({ testimonials  } : any) => {
           }}
           className="testimonial-swiper"
         >
-          {testimonials.map((testimonial : any, index:any) => (
+          {testimonials.map((testimonial: any, index: any) => (
             <SwiperSlide key={index}>
-            <div
-              className={`relative p-6 py-10 shadow-md transition duration-300 ease-in-out transform h-full  ${
-                index % 2 === 1 ? "bg-blue-500 text-white" : "bg-[#F7F9FC]"
-              }`}
-            >
-              {/* Quote Icon */}
-              <div>
-                <img
-                  src={index % 2 === 1 ? QuoteIcon : QuoteIcon2}
-                  alt="Quote Icon"
-                  className="w-14 h-12 mb-4"
-                />
+              <div
+                className={`relative p-6 py-10 shadow-md transition duration-300 ease-in-out transform h-full ${
+                  index % 2 === 1 ? "bg-blue-500 text-white" : "bg-[#F7F9FC]"
+                }`}
+              >
+                {/* Quote Icon */}
+                <div>
+                  <img
+                    src={index % 2 === 1 ? QuoteIcon : QuoteIcon2}
+                    alt="Quote Icon"
+                    className="w-14 h-12 mb-4"
+                  />
+                </div>
+
+                {/* Feedback Text */}
+                <p className="text-sm mb-6">{testimonial.feedback}</p>
+
+                {/* Down Arrow */}
+                <div className="absolute bottom-[-14px] left-[10%] transform -translate-x-1/2">
+                  <div
+                    className={`w-0 h-0 border-t-[15px] ${
+                      index % 2 === 1 ? "border-t-blue-500" : "border-t-[#F7F9FC]"
+                    } border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent`}
+                  ></div>
+                </div>
               </div>
-          
-              {/* Feedback Text */}
-              <p className="text-sm mb-6">{testimonial.feedback}</p>
-          
-              {/* Down Arrow */}
-              <div className="absolute bottom-[-14px] left-[10%] transform -translate-x-1/2">
-                <div
-                  className={`w-0 h-0 border-t-[15px] ${
-                    index % 2 === 1 ? "border-t-blue-500" : "border-t-[#F7F9FC]"
-                  } border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent`}
-                ></div>
-              </div>
-          
-              {/* User Info */}
-              
-            </div>
-            <div className="flex items-center gap-4 mt-8 ml-10">
+              <div className="flex items-center gap-4 mt-8 ml-10">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
@@ -92,20 +94,26 @@ const TestimonialSlider = ({ testimonials  } : any) => {
                   </p>
                 </div>
               </div>
-          </SwiperSlide>
-          
+            </SwiperSlide>
           ))}
         </Swiper>
 
         {/* Custom Navigation Arrows */}
         <div className="absolute -top-20 right-4 flex gap-2 z-10">
-          <button className="custom-swiper-button-prev bg-blue-500 text-white p-2 px-3 shadow-md hover:bg-blue-600 focus:outline-none">
+          {/* Previous Button */}
+          <button
+            className={`custom-swiper-button-prev p-2 px-3  focus:outline-none transition ${
+              isBeginning
+                ? "bg-[#EBF6FF]  text-blue-500"
+                : "bg-blue-500 text-white hover:bg-blue-600"
+            }`}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
-              stroke="white"
+              stroke={isBeginning ? "blue" : "white"}
               className="w-5"
             >
               <path
@@ -115,13 +123,21 @@ const TestimonialSlider = ({ testimonials  } : any) => {
               />
             </svg>
           </button>
-          <button className="custom-swiper-button-next bg-blue-500 text-white -rotate-180 p-2 shadow-md hover:bg-blue-600 focus:outline-none">
+
+          {/* Next Button */}
+          <button
+            className={`custom-swiper-button-next -rotate-180 p-2 shado focus:outline-none transition ${
+              isEnd
+                ? "bg-[#EBF6FF]  text-blue-500"
+                : "bg-blue-500 text-white hover:bg-blue-600"
+            }`}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
-              stroke="currentColor"
+              stroke={isEnd ? "blue" : "white"}
               className="size-6"
             >
               <path
