@@ -7,6 +7,7 @@ import ContactUsPage from "./pages/contactUs";
 import HomePage from "./pages/homePage";
 import OurServicePage from "./pages/ourService";
 import TestimonialPage from "./pages/testimonial";
+import { FooterSection } from "./component/footer/FooterSection";
 
 function App() {
   const [isopen, setIsopen] = useState(true);
@@ -21,6 +22,7 @@ function App() {
         <Route path="/our-services" element={<OurServicePage />} />
         <Route path="/about-us" element={<AboutPage />} />
       </Routes>
+      <FooterSection/>
     </Router>
   );
 }

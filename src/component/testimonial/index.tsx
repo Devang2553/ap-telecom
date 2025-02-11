@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+
 import { Navigation } from "swiper/modules";
 import QuoteIcon from "/Quote.png"
 import QuoteIcon2 from "/Quote2.png"
@@ -44,7 +45,7 @@ const TestimonialSlider = ({ testimonials  } : any) => {
           }}
           className="testimonial-swiper"
         >
-          {testimonials.map((testimonial : any, index:any) => (
+          {testimonials?.map((testimonial : any, index:any) => (
             <SwiperSlide key={index}>
             <div
               className={`relative p-6 py-10 shadow-md transition duration-300 ease-in-out transform h-full  ${
