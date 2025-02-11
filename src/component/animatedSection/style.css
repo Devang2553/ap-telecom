@@ -1,0 +1,36 @@
+/* Smooth transition for the main content */
+.content-container {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards; /* Fade-in animation */
+  }
+  
+  /* Keyframes for fade effects */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .animated-section {
+    transition: all 0.8s ease-out; /* Smooth transition for appearance */
+    opacity: 0;
+    transform: translateY(50px); /* Start with slight downward movement */
+  }
+  
+  .animated-section.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move to normal position */
+  }
+  
