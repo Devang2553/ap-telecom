@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import 'swiper/css';
 // import 'swiper/css/navigation';
@@ -73,7 +73,9 @@ const TestimonialSlider = ({ testimonials }: any) => {
                 <div className="absolute bottom-[-14px] left-[10%] transform -translate-x-1/2">
                   <div
                     className={`w-0 h-0 border-t-[15px] ${
-                      index % 2 === 1 ? "border-t-blue-500" : "border-t-[#F7F9FC]"
+                      index % 2 === 1
+                        ? "border-t-blue-500"
+                        : "border-t-[#F7F9FC]"
                     } border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent`}
                   ></div>
                 </div>
