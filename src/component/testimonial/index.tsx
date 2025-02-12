@@ -19,9 +19,9 @@ const TestimonialSlider = ({ testimonials }: any) => {
 
   return (
     <div className="w-full px-10">
-      <h2 className="text-xl font-semibold text-blue-800 mb-4">TESTIMONIAL</h2>
-      <h3 className="lg:text-3xl text-xl font-bold mb-24 lg:mb-8 text-gray-800">
-        See What Others Have to Say About Us
+      <h2 className="text-[18px] font-semibold text-blue-800 mb-4">TESTIMONIAL</h2>
+      <h3 className="lg:text-[40px] text-xl font-bold mb-24 lg:mb-8 text-gray-800 md:leading-10">
+        See What Others Have <br/> to Say About Us
       </h3>
 
       <div className="relative">

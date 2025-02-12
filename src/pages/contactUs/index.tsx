@@ -18,7 +18,7 @@ const ContactUsPage = () => {
     },
     {
       id: 2,
-      icon: <PhoneIcon />,
+      icon: <PhoneIcon color="black" />,
       title: "Contact Us",
 
       description: "+84 234 567 890",
@@ -101,6 +101,7 @@ const ContactUsPage = () => {
         backgroundImage={ServiceBG}
         title="Contacts"
         subtitle="Home ideas and design inspiration"
+        
       />
 
       {/* Services Section */}
@@ -136,7 +137,7 @@ const ContactUsPage = () => {
                     placeholder="Your Name"
                   />
                 </div>
-                <div className="flex flex-col gap-3 mt-5 md:mt-0">
+                <div className="flex flex-col gap-3 mt-5 md:mt-3">
                   <h2 className="text-[#6C7275]  font-bold text-xs">
                     EMAIL ADDRESS
                   </h2>
@@ -146,7 +147,7 @@ const ContactUsPage = () => {
                     placeholder="Your Email"
                   />
                 </div>
-                <div className="flex flex-col gap-3 mt-5 md:mt-0">
+                <div className="flex flex-col gap-3 mt-5 md:mt-3">
                   <h2 className="text-[#6C7275]  font-bold text-xs">MESSAGE</h2>
                   <textarea
                     rows={5}
@@ -165,7 +166,7 @@ const ContactUsPage = () => {
                 </div>
               </form>
             </div>
-            <div className="mt-10 w-full md:w-[48%] h-[400px]">
+            <div className="mt-10 w-full md:w-[48%] h-[550px]">
               <iframe
                 width="100%"
                 height="100%"

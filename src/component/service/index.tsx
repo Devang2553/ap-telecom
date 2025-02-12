@@ -126,7 +126,7 @@ const OurService = () => {
       <div className="h-[63px] border-b-2 border-[#0A5EB0] mb-3">
         <h1 className="font-extrabold text-4xl">Our Service</h1>
       </div>
-      <div className="bg-[#EBF6FF] w-full h-[60px] flex items-center justify-center mt-5 md:mt-0  md:px-5 rounded">
+      <div className="bg-[#EBF6FF] w-fit h-[60px] flex items-center justify-center mt-5 md:mt-0  md:px-5 rounded">
         <h2
           onClick={() => handleSelectTab(1)}
           className={`${
