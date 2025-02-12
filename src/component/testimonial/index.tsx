@@ -20,7 +20,7 @@ const TestimonialSlider = ({ testimonials }: any) => {
   return (
     <div className="w-full px-10">
       <h2 className="text-xl font-semibold text-blue-800 mb-4">TESTIMONIAL</h2>
-      <h3 className="text-3xl font-bold mb-8 text-gray-800">
+      <h3 className="lg:text-3xl text-xl font-bold mb-24 lg:mb-8 text-gray-800">
         See What Others Have to Say About Us
       </h3>
 
