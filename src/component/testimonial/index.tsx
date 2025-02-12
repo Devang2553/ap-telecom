@@ -50,7 +50,7 @@ const TestimonialSlider = ({ testimonials }: any) => {
           }}
           className="testimonial-swiper"
         >
-          {testimonials.map((testimonial: any, index: any) => (
+          {testimonials?.map((testimonial: any, index: any) => (
             <SwiperSlide key={index}>
               <div
                 className={`relative p-6 py-10 shadow-md transition duration-300 ease-in-out transform h-full ${
