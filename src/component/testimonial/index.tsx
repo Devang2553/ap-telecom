@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-
+import "swiper/css";
+import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import QuoteIcon from "/Quote.png";
 import QuoteIcon2 from "/Quote2.png";
@@ -50,7 +49,7 @@ const TestimonialSlider = ({ testimonials }: any) => {
           }}
           className="testimonial-swiper"
         >
-          {testimonials?.map((testimonial: any, index: any) => (
+          {testimonials.map((testimonial: any, index: any) => (
             <SwiperSlide key={index}>
               <div
                 className={`relative p-6 py-10 shadow-md transition duration-300 ease-in-out transform h-full ${
@@ -73,9 +72,7 @@ const TestimonialSlider = ({ testimonials }: any) => {
                 <div className="absolute bottom-[-14px] left-[10%] transform -translate-x-1/2">
                   <div
                     className={`w-0 h-0 border-t-[15px] ${
-                      index % 2 === 1
-                        ? "border-t-blue-500"
-                        : "border-t-[#F7F9FC]"
+                      index % 2 === 1 ? "border-t-blue-500" : "border-t-[#F7F9FC]"
                     } border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent`}
                   ></div>
                 </div>

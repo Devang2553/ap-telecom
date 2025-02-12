@@ -28,7 +28,7 @@ export const HeroSection = ({
         <p className="text-lg">{subtitle}</p>
       </div>
       {/* Cloud Icon Section at Bottom of Adjusted h-screen */}
-      <div className="absolute w-full -bottom-1 z-10">
+      <div className="absolute w-full -bottom-20 md:-bottom-10 xl:-bottom-1 z-10">
         <CloudIcon />
       </div>
     </div>

@@ -6,43 +6,43 @@ import { Partners } from "../../component/partners";
 import OurService from "../../component/service";
 import Testimonial from "../../component/testimonial";
 
-// const testimonials = [
-//   {
-//     name: "Jhon Smith",
-//     role: "Web Developer",
-//     image: "https://via.placeholder.com/50",
-//     feedback:
-//       "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer."
-//   },
-//   {
-//     name: "Md Shamim Hossain",
-//     role: "UI/UX Designer",
-//     image: "https://via.placeholder.com/50",
-//     feedback:
-//       "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer."
-//   },
-//   {
-//     name: "Jesica Lirona",
-//     role: "Front End Developer",
-//     image: "https://via.placeholder.com/50",
-//     feedback:
-//       "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer."
-//   },
-//   {
-//     name: "Emily Watson",
-//     role: "Backend Developer",
-//     image: "https://via.placeholder.com/50",
-//     feedback:
-//       "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer."
-//   },
-//   {
-//     name: "Michael Scott",
-//     role: "Project Manager",
-//     image: "https://via.placeholder.com/50",
-//     feedback:
-//       "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer."
-//   }
-// ];
+const testimonials = [
+  {
+    name: "Jhon Smith",
+    role: "Web Developer",
+    image: "https://via.placeholder.com/50",
+    feedback:
+      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer."
+  },
+  {
+    name: "Md Shamim Hossain",
+    role: "UI/UX Designer",
+    image: "https://via.placeholder.com/50",
+    feedback:
+      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer."
+  },
+  {
+    name: "Jesica Lirona",
+    role: "Front End Developer",
+    image: "https://via.placeholder.com/50",
+    feedback:
+      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer."
+  },
+  {
+    name: "Emily Watson",
+    role: "Backend Developer",
+    image: "https://via.placeholder.com/50",
+    feedback:
+      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer."
+  },
+  {
+    name: "Michael Scott",
+    role: "Project Manager",
+    image: "https://via.placeholder.com/50",
+    feedback:
+      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer."
+  }
+];
 
 const HomePage = () => {
   return (
@@ -92,10 +92,10 @@ const HomePage = () => {
         <OurService />
       </div>
       <div>
-        <Testimonial />
+        {/* <Testimonial /> */}
       </div>
       <div>
-        {/* <Testimonial testimonials={testimonials} /> */}
+        <Testimonial testimonials={testimonials} />
       </div>
       <div>
         <QuoteForm />

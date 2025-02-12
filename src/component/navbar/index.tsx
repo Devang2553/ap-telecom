@@ -54,7 +54,7 @@ export const Navbar: React.FC<NavbarType> = ({ isopen, setIsopen }) => {
         justifyContent: "space-between",
       }}
     >
-      <div className="md:hidden">
+      <div className="lg:hidden">
         {isopen ? (
           <div onClick={HandleNav}>
             <Hamburger />
@@ -66,14 +66,14 @@ export const Navbar: React.FC<NavbarType> = ({ isopen, setIsopen }) => {
         )}
       </div>
       <div
-        className="logo cursor-pointer hidden md:block"
+        className="logo cursor-pointer hidden lg:block"
         onClick={() => {
           navigate("/");
         }}
       >
         <LogoIcon />
       </div>
-      <div className="hidden md:flex items-center  gap-14">
+      <div className="hidden lg:flex items-center  gap-14">
         {listArray?.map((x) => (
           <a
             key={x.id}
