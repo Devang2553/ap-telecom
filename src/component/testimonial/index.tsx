@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useEffect, useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import QuoteIcon from "/Quote.png";
 import QuoteIcon2 from "/Quote2.png";
 
@@ -19,9 +19,11 @@ const TestimonialSlider = ({ testimonials }: any) => {
 
   return (
     <div className="w-full px-10">
-      <h2 className="text-[18px] font-semibold text-blue-800 mb-4">TESTIMONIAL</h2>
+      <h2 className="text-[18px] font-semibold text-blue-800 mb-4">
+        TESTIMONIAL
+      </h2>
       <h3 className="lg:text-[40px] text-xl font-bold mb-24 lg:mb-8 text-gray-800 md:leading-10">
-        See What Others Have <br/> to Say About Us
+        See What Others Have <br /> to Say About Us
       </h3>
 
       <div className="relative">
@@ -72,7 +74,9 @@ const TestimonialSlider = ({ testimonials }: any) => {
                 <div className="absolute bottom-[-14px] left-[10%] transform -translate-x-1/2">
                   <div
                     className={`w-0 h-0 border-t-[15px] ${
-                      index % 2 === 1 ? "border-t-blue-500" : "border-t-[#F7F9FC]"
+                      index % 2 === 1
+                        ? "border-t-blue-500"
+                        : "border-t-[#F7F9FC]"
                     } border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent`}
                   ></div>
                 </div>

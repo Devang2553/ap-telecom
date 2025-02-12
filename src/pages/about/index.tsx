@@ -1,13 +1,9 @@
 import ServiceBG from "../../assets/secBG.jpeg";
 
 import Mission1 from "../../assets/m1.png";
-import Mission2 from "../../assets/m2.png";
-import Mission3 from "../../assets/m3.png";
-import Mission4 from "../../assets/m4.png";
 import OurValues from "../../assets/ourValues.png";
 import WcUImg from "../../assets/wcu.png";
 import WwrImg from "../../assets/wwr.png";
-import WwrImg2 from "../../assets/wwr2.png";
 import AboutUsPage from "../../component/about";
 import { HeroSection } from "../../component/mainSection";
 
@@ -88,7 +84,7 @@ const AboutPage = () => {
       {/* Who we are  */}
       <div className="lg:px-20 lg:my-10  flex  flex-col-reverse lg:flex-row lg:gap-20  items-center  px-7 justify-between">
         <div className=" mt-10 lg:mt-0">
-            <img src={WwrImg} alt="" />
+          <img src={WwrImg} alt="" />
         </div>
         <div className=" relative  lg:w-[50%] left flex flex-col gap-10 mt-6 lg:mt-11">
           <h1 className="font-bold text-3xl lg:text-[40px]">Who We Are</h1>
@@ -127,11 +123,7 @@ const AboutPage = () => {
       <div className="flex items-center  flex-col-reverse lg:flex-row lg:px-10 my-10 lg:mt-16 lg:my-20 px-7">
         <div className="">
           <div className="">
-            <img
-              src={OurValues}
-              alt=""
-              className="rounded-lg "
-            />
+            <img src={OurValues} alt="" className="rounded-lg " />
           </div>
         </div>
 
