@@ -1,4 +1,3 @@
-import { LogoIcon } from "../../assets/LogoIcon";
 import Logo from "/Layer_1.png";
 import FB from "/Fb.png";
 import Github from "/Github.png";
