@@ -1,47 +1,50 @@
 import { MobileBgIcon } from "../../assets/MobileBgIcon";
-import MobileImage from "../../assets/mobile.png";
+import MobileImage from "../../assets/mobileIcon.png";
 import AboutUsPage from "../../component/about";
 import QuoteForm from "../../component/footer/BottomPage";
 import { Partners } from "../../component/partners";
 import OurService from "../../component/service";
 import Testimonial from "../../component/testimonial";
+import Avatar from "../../assets/avatar12.png";
+import { AnimatedSection } from "../../component/animatedSection";
+import { LogoIcon } from "../../assets/LogoIcon";
 
 const testimonials = [
   {
     name: "Jhon Smith",
     role: "Web Developer",
-    image: "https://via.placeholder.com/50",
+    image: { Avatar },
     feedback:
-      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer."
+      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer.",
   },
   {
     name: "Md Shamim Hossain",
     role: "UI/UX Designer",
-    image: "https://via.placeholder.com/50",
+    image: { Avatar },
     feedback:
-      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer."
+      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer.",
   },
   {
     name: "Jesica Lirona",
     role: "Front End Developer",
-    image: "https://via.placeholder.com/50",
+    image: { Avatar },
     feedback:
-      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer."
+      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer.",
   },
   {
     name: "Emily Watson",
     role: "Backend Developer",
-    image: "https://via.placeholder.com/50",
+    image: { Avatar },
     feedback:
-      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer."
+      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer.",
   },
   {
     name: "Michael Scott",
     role: "Project Manager",
-    image: "https://via.placeholder.com/50",
+    image: { Avatar },
     feedback:
-      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer."
-  }
+      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer.",
+  },
 ];
 
 const HomePage = () => {
@@ -74,8 +77,13 @@ const HomePage = () => {
                 <img src={MobileImage} className=" " />
               </div>
               <div className="absolute -bottom-32 md:-bottom-20  left-10  md:-left-24 ">
-                <div className="flex items-center justify-center mx-auto  md:w-full w-[350px]">
+                <div className="relative flex items-center justify-center mx-auto  md:w-full w-[350px]">
                   <MobileBgIcon />
+                  <div className="absolute -top-10 md:top-0">
+                    <div className="flex items-center justify-center w-full h-full">
+                      <LogoIcon className="w-32 md:w-52" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -85,21 +93,17 @@ const HomePage = () => {
       <div>
         <Partners />
       </div>
-      <div>
+      <AnimatedSection>
         <AboutUsPage />
-      </div>
-      <div>
-        <OurService />
-      </div>
-      <div>
-        {/* <Testimonial /> */}
-      </div>
-      <div>
+      </AnimatedSection>
+      <OurService />
+      {/* <AnimatedSection><Testimonial /></AnimatedSection> */}
+      <AnimatedSection>
         <Testimonial testimonials={testimonials} />
-      </div>
-      <div>
+      </AnimatedSection>
+      <AnimatedSection>
         <QuoteForm />
-      </div>
+      </AnimatedSection>
     </>
   );
 };

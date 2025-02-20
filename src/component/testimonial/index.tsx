@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 // @ts-ignore
 import "swiper/css";
-// @ts-ignore
+// @ts-ignore 
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import QuoteIcon from "/Quote.png";
 import QuoteIcon2 from "/Quote2.png";
+import Avatar from '../../assets/avatar12.png'
+
 
 const TestimonialSlider = ({ testimonials }: any) => {
   const swiperRef: any = useRef(null);
@@ -57,13 +59,13 @@ const TestimonialSlider = ({ testimonials }: any) => {
             <SwiperSlide key={index}>
               <div
                 className={`relative p-6 py-10 shadow-md transition duration-300 ease-in-out transform h-full ${
-                  index % 2 === 1 ? "bg-blue-500 text-white" : "bg-[#F7F9FC]"
+                  index === swiperRef.current?.swiper.realIndex+1 ? "bg-[#0A5EB0] text-white" : "bg-[#F7F9FC]"
                 }`}
               >
                 {/* Quote Icon */}
                 <div>
                   <img
-                    src={index % 2 === 1 ? QuoteIcon : QuoteIcon2}
+                    src={index === swiperRef.current?.swiper.realIndex+1 ? QuoteIcon : QuoteIcon2}
                     alt="Quote Icon"
                     className="w-14 h-12 mb-4"
                   />
@@ -74,18 +76,18 @@ const TestimonialSlider = ({ testimonials }: any) => {
 
                 {/* Down Arrow */}
                 <div className="absolute bottom-[-14px] left-[10%] transform -translate-x-1/2">
-                  <div
+                    <div
                     className={`w-0 h-0 border-t-[15px] ${
-                      index % 2 === 1
-                        ? "border-t-blue-500"
-                        : "border-t-[#F7F9FC]"
+                      index === swiperRef.current?.swiper.realIndex+1
+                      ? "border-t-[#0A5EB0]"
+                      : "border-t-[#F7F9FC]"
                     } border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent`}
-                  ></div>
+                    ></div>
                 </div>
               </div>
               <div className="flex items-center gap-4 mt-8 ml-10">
                 <img
-                  src={testimonial.image}
+                  src={Avatar}
                   alt={testimonial.name}
                   className="w-12 h-12 rounded-full"
                 />
@@ -93,7 +95,7 @@ const TestimonialSlider = ({ testimonials }: any) => {
                   <h4 className="font-bold text-lg">{testimonial.name}</h4>
                   <p
                     className={`text-sm font-medium ${
-                      index % 2 === 1 ? "text-white" : "text-gray-500"
+                      index === swiperRef.current?.swiper.realIndex+1 ? "text-white" : "text-gray-500"
                     }`}
                   >
                     {testimonial.role}
@@ -110,8 +112,8 @@ const TestimonialSlider = ({ testimonials }: any) => {
           <button
             className={`custom-swiper-button-prev p-2 px-3  focus:outline-none transition ${
               isBeginning
-                ? "bg-[#EBF6FF]  text-blue-500"
-                : "bg-blue-500 text-white hover:bg-blue-600"
+                ? "bg-[#EBF6FF]  text-[#0A5EB0]"
+                : "bg-[#0A5EB0] text-white hover:bg-[#0A5EB0]"
             }`}
           >
             <svg
@@ -134,8 +136,8 @@ const TestimonialSlider = ({ testimonials }: any) => {
           <button
             className={`custom-swiper-button-next -rotate-180 p-2 shado focus:outline-none transition ${
               isEnd
-                ? "bg-[#EBF6FF]  text-blue-500"
-                : "bg-blue-500 text-white hover:bg-blue-600"
+                ? "bg-[#EBF6FF]  text-[#0A5EB0]"
+                : "bg-[#0A5EB0] text-white hover:bg-[#0A5EB0]"
             }`}
           >
             <svg

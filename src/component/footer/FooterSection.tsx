@@ -1,8 +1,9 @@
-import Logo from "/Layer_1.png";
-import FB from "/Fb.png";
-import Github from "/Github.png";
-import dribbble from "/dribbble.png";
-import twitter from "/twitter.png";
+import { DribbleIcon } from "../../assets/DribbleIcon";
+import { FBIcon } from "../../assets/FBIcon";
+import { GithubIcon } from "../../assets/GithubIcon";
+import { SendIcon } from "../../assets/SendIcon";
+import { WhiteLogo } from "../../assets/WhiteLogo";
+import { XIcon } from "../../assets/XIcon";
 
 export const FooterSection = () => {
   return (
@@ -12,16 +13,23 @@ export const FooterSection = () => {
         <div className="unskew max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-10  md:gap-32">
           {/* Logo and Description */}
           <div className="flex flex-col items-start gap-3 max-w-[400px]  ">
-            <img src={Logo} className="aspect-auto " />
+            <div className="aspect-auto">
+              <WhiteLogo />
+            </div>
+            {/* <img src={Logo} className="aspect-auto " /> */}
             <p className="text-gray-400">
               In the fast-paced world of modern technology, many leadership
               executives and organizations understand that building.
             </p>
             <div className="flex items-center gap-2">
-              <img src={FB} />
-              <img src={dribbble} />
-              <img src={Github} />
-              <img src={twitter} />
+              <FBIcon />
+              {/* <img src={FB} /> */}
+              <DribbleIcon />
+              {/* <img src={dribbble} /> */}
+              <GithubIcon />
+              {/* <img src={Github} /> */}
+              {/* <img src={twitter} /> */}
+              <XIcon />
             </div>
           </div>
 
@@ -58,12 +66,18 @@ export const FooterSection = () => {
               <h4 className="text-lg font-semibold mb-4">Community</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white line-through "
+                  >
                     Learners
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white">
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white line-through"
+                  >
                     Leadership
                   </a>
                 </li>
@@ -82,8 +96,10 @@ export const FooterSection = () => {
 
             {/* Newsletter */}
             <div className="w-full">
-              <h4 className="text-lg font-semibold mb-4">Newsletter</h4>
-              <p className="text-gray-400 mb-4">
+              <h4 className="text-lg font-semibold mb-4 underline">
+                Newsletter
+              </h4>
+              <p className="text-gray-400 mb-4 underline">
                 Sign up and receive the latest tips via email.
               </p>
               <form className="flex flex-col items gap-6 w-full">
@@ -91,7 +107,7 @@ export const FooterSection = () => {
                   <input
                     type="email"
                     placeholder="Enter Your Mail"
-                    className=" p-2 px-9 w-[82%] sm:w-fit bg-white/20 absolute  focus:outline-none"
+                    className=" p-2 px-9 w-[82%] sm:w-fit bg-white/20 absolute placeholder:underline  focus:outline-none"
                   />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -108,11 +124,12 @@ export const FooterSection = () => {
                     />
                   </svg>
                 </div>
+
                 <button
                   type="submit"
-                  className="bg-blue-600 text-white px-9 min-w-[250px] py-2    hover:bg-blue-700 underline"
+                  className="bg-blue-600 flex items-center justify-center gap-3  text-white px-9 min-w-[250px] py-2    hover:bg-blue-700 underline"
                 >
-                  Subscribe Now
+                  Subscribe Now <SendIcon />
                 </button>
               </form>
             </div>

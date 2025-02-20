@@ -1,4 +1,4 @@
-import "./footer.css"
+import "./footer.css";
 
 const QuoteForm = () => {
   return (
@@ -14,21 +14,28 @@ const QuoteForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Form */}
           <form className="space-y-4">
+            <h2 className="text-[#6C7275]  font-bold text-xs">FULL NAME</h2>
             <input
               type="text"
               placeholder="Your Name"
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+            <h2 className="text-[#6C7275]  font-bold text-xs">Email</h2>
+
             <input
               type="email"
               placeholder="Your Email"
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+            <h2 className="text-[#6C7275]  font-bold text-xs">Your number</h2>
+
             <input
               type="text"
               placeholder="Your number"
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+            <h2 className="text-[#6C7275]  font-bold text-xs">Your message</h2>
+
             <textarea
               placeholder="Your message"
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -43,11 +50,11 @@ const QuoteForm = () => {
           </form>
 
           {/* Map */}
-          <div className="w-full h-full">
+          <div className="w-full h-full ">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093707!2d144.95373531590443!3d-37.81720997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d94f69e124a4!2sGoogle!5e0!3m2!1sen!2sin!4v1614121344240!5m2!1sen!2sin"
               width="100%"
-              height="300"
+              height="500"
               allowFullScreen={false}
               loading="lazy"
               className="border rounded-lg"
@@ -58,7 +65,6 @@ const QuoteForm = () => {
       </div>
 
       {/* Footer Section */}
-      
     </div>
   );
 };

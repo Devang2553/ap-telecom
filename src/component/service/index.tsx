@@ -10,6 +10,7 @@ import Service4Image from "../../assets/s4.png";
 import Service5Image from "../../assets/s5.png";
 import Service7Image from "../../assets/s7.png";
 import { ServiceCard } from "./ServiceCard";
+import { AnimatedSection } from "../animatedSection";
 
 const OurService = () => {
   const serviceArray1 = [
@@ -145,17 +146,18 @@ const OurService = () => {
         </h2>
       </div>
       <div className=" mt-7 lg:mt-12">
-        
         {(selectedTab == 1 ? serviceArray1 : serviceArray2)?.map((x) => (
-          <ServiceCard
-            key={x.id}
-            image={x.image}
-            statsNumber={`${x.years}+`}
-            statsText={`Years Of\nExperience`}
-            title={x.title}
-            description={x.description}
-            reverse={x.reverse}
-          />
+          <AnimatedSection key={x.id}>
+            <ServiceCard
+              key={x.id}
+              image={x.image}
+              statsNumber={`${x.years}+`}
+              statsText={`Years Of\nExperience`}
+              title={x.title}
+              description={x.description}
+              reverse={x.reverse}
+            />
+          </AnimatedSection>
         ))}
       </div>
     </div>
