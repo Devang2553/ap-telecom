@@ -67,7 +67,7 @@ const array = [
 export const Partners = () => {
   return (
     <div>
-      <div className="overflow-x-hidden md:hidden  h-full  bg-[#0A5EB0] ">
+      {/* <div className="overflow-x-hidden md:hidden  h-full  bg-[#0A5EB0] ">
         <svg
           width="100vw"
           className=""
@@ -81,9 +81,9 @@ export const Partners = () => {
             fill="white"
           />
         </svg>{" "}
-      </div>
+      </div> */}
 
-      <div className="overflow-x-hidden hidden md:block  h-full  bg-[#0A5EB0] ">
+      <div className="overflow-x-hidden   w-full  h-full  bg-[#0A5EB0] ">
         <CloudIcon />
       </div>
 

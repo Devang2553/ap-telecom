@@ -13,10 +13,10 @@ const AboutUsPage = () => {
           </p>
         </div>
         
-        <div className=" md:px-20 px-7 flex flex-col md:flex-row items-start justify-between w-full mt-16 ">
-          <div className="left flex flex-col  gap-10 mt-11">
+        <div className="  flex flex-col md:flex-row items-center  justify-between w-full mt-16 max-w-screen-xl mx-auto">
+          <div className="left flex flex-col w-full  gap-10 ">
             <h1 className="font-bold text-[40px]">Who We Are</h1>
-            <p className="md:w-[80%]">
+            <p className="lg:w-[80%]">
               AP Telecom Pty Ltd is a leading provider of telecommunication and
               security solutions, dedicated to meeting the evolving needs of our
               clients. With years of experience and a team of skilled
@@ -27,8 +27,8 @@ const AboutUsPage = () => {
               Read more
             </button>
           </div>
-          <div className="right mt-10 md:mt-0">
-            <img src={AboutImage} alt="" className="h-[350px] w-[300px] md:h-[488px]   md:min-w-[419px]" />
+          <div className="right mt-10 md:mt-0 h-full w-full">
+            <img src={AboutImage} alt="" className="h-full w-full aspect-square" />
           </div>
         </div>
       </div>

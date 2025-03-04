@@ -145,7 +145,7 @@ const OurService = () => {
           Security Alarm and CCTV Services
         </h2>
       </div>
-      <div className=" mt-7 lg:mt-12">
+      <div className=" mt-7 ">
         {(selectedTab == 1 ? serviceArray1 : serviceArray2)?.map((x) => (
           <AnimatedSection key={x.id}>
             <ServiceCard

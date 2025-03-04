@@ -19,19 +19,19 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   return (
     <div
-      className={`flex flex-col lg:flex-row  items-center gap-9  mb-10 lg:mb-0 lg:h-screen lg:px-14  ${
+      className={`flex flex-col lg:flex-row  items-center gap-9  mb-10  lg:px-14  ${
         reverse ? " lg:flex-row-reverse" : "flex-col lg:flex-row"
       }`}
     >
       {/* Image Section */}
-      <div className="image lg:h-[565px] lg:w-[525px] relative px-3 lg:px-0">
-        <div className="hidden lg:block h-[565px] min-w-[525px] absolute bg-[#F7F9FC] -z-10 -top-10 -left-10"></div>
+      <div className="ima relative px-3 lg:px-0">
+        <div className="hidden lg:block  absolute bg-[#F7F9FC] -z-10 -top-10 -left-10"></div>
         <img
           src={image}
           alt={title}
           className=" lg:h-[565px] w-[400px] lg:min-w-[525px]"
         />
-        <div className="absolute bottom-4 right-5 bg-[#0A5EB0] py-4 px-6 w-fit h-[84px] flex items-center gap-3">
+        <div className="absolute bottom-4 right-5 bg-[#0A5EB0] py-4 px-6 w-fit flex items-center gap-3">
           <h3 className="font-bold text-white text-[40px]">{statsNumber}</h3>
           <p className="text-white">
             {statsText.split("\n").map((line, index) => (

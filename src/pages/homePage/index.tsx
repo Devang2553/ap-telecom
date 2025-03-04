@@ -95,9 +95,9 @@ const HomePage = () => {
               </div>
             </div>
           </section>
-          <div className="overflow-hidden w-[100vw]  absolute bottom-0 z-50  h-[155px]    bg-[#0A5EB0] ">
+          {/* <div className="overflow-hidden w-[100vw]  absolute bottom-0 z-50  h-[155px]    bg-[#0A5EB0] ">
         <CloudIcon />
-      </div>
+      </div> */}
         </div>
       </div>
       <div>
