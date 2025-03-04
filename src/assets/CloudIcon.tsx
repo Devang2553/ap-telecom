@@ -2,9 +2,8 @@ export const CloudIcon = () => {
   return (
     <svg
       width="100vw"
-      className=""
       height="184"
-      viewBox="0 0 1440 152"
+      viewBox="0 0 1440 184"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

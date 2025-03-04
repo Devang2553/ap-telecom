@@ -1,13 +1,12 @@
-import { MobileBgIcon } from "../../assets/MobileBgIcon";
-import MobileImage from "../../assets/mobileIcon.png";
+import { CloudIcon } from "../../assets";
+import Avatar from "../../assets/avatar12.png";
+import { SideIconHomePage } from "../../assets/SideIconHomePage";
 import AboutUsPage from "../../component/about";
+import { AnimatedSection } from "../../component/animatedSection";
 import QuoteForm from "../../component/footer/BottomPage";
 import { Partners } from "../../component/partners";
 import OurService from "../../component/service";
 import Testimonial from "../../component/testimonial";
-import Avatar from "../../assets/avatar12.png";
-import { AnimatedSection } from "../../component/animatedSection";
-import { LogoIcon } from "../../assets/LogoIcon";
 
 const testimonials = [
   {
@@ -51,15 +50,16 @@ const HomePage = () => {
   return (
     <>
       <div className="h-full relative  bg-[#0A5EB0]    pt-10  ">
-        <div className="  relative  ">
-          <section className="md:flex  justify-between ">
-            <div className="left-side md:ml-20 mt-32 md:mt-20 px-7 md:px-0">
+        <div className="  relative  pb-10">
+          <section className="flex md:flex-row flex-col-reverse    ">
+            {/* Left side */}
+            <div className="left-side  md:ml-20 mt-12 md:mt-20 px-7 md:px-0 md:w-[50%]">
               <h1 className="font-black text-white text-[24px] text-center md:text-left md:text-[30px]">
                 Welcome to AP Telecom Pty Ltd <br />
                 Your Trusted Partner for Telecommunication <br /> and Security
                 Solutions.
               </h1>
-              <p className="text-white mt-[20px] md:max-w-[80%]">
+              <p className="text-white mt-[20px] md:w-[90%]">
                 {" "}
                 At AP Telecom Pty Ltd, we specialize in providing cutting-edge
                 telecommunication and security services tailored to your needs.
@@ -67,27 +67,37 @@ const HomePage = () => {
                 deliver solutions that keep you connected and secure, whether at
                 home or in the workplace.
               </p>
-              <p className="text-white mt-[20px] md:max-w-[80%]">
+              <p className="text-white mt-[20px] md:w-[90%]">
                 Experience seamless connectivity and enhanced security with our
                 professional services. Contact us today for a consultation.
               </p>
             </div>
-            <div className="right-side relative md:min-w-[439px] flex items-center justify-center md:block mt-10 md:mt-0  ">
-              <div className="">
+            {/* right side */}
+            <div className="right-side mx-auto w-fit relative   md:block mt-10 md:mt-0  ">
+              {/* <div className="">
                 <img src={MobileImage} className=" " />
-              </div>
-              <div className="absolute -bottom-32 md:-bottom-20  left-10  md:-left-24 ">
-                <div className="relative flex items-center justify-center mx-auto  md:w-full w-[350px]">
+              </div> */}
+              <div className="w-fit">
+                <div className=" ">
+                  {/* <div className="relative flex items-center justify-center mx-auto  md:w-full w-[350px]">
                   <MobileBgIcon />
                   <div className="absolute -top-10 md:top-0">
                     <div className="flex items-center justify-center w-full h-full">
                       <LogoIcon className="w-32 md:w-52" />
                     </div>
                   </div>
+                </div> */}
+                  <div>
+                    {/* <img src={SideImg} alt=""  /> */}
+                    <SideIconHomePage />
+                  </div>
                 </div>
               </div>
             </div>
           </section>
+          <div className="overflow-hidden w-[100vw]  absolute bottom-0 z-50  h-[155px]    bg-[#0A5EB0] ">
+        <CloudIcon />
+      </div>
         </div>
       </div>
       <div>
