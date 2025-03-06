@@ -106,7 +106,7 @@ export const Navbar: React.FC<NavbarType> = ({ isopen, setIsopen }) => {
 
       {!isopen && (
         <div>
-          <ul className="fixed   w-full flex md:hidden flex-col  md:pt-5  py-5 h-screen top-0  pt-[40%]  left-0  bg-[#0A5EB0]  items-center gap-5 z-50">
+          <ul className="fixed   w-full flex md:hidden flex-col  md:pt-5  py-5 h-screen top-0  pt-[20%]  left-0  bg-[#0A5EB0]  items-center gap-5 z-50">
             {listArray.map((x, index) => (
               <Link
                 onClick={() => setIsopen(true)}

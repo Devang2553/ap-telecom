@@ -13,7 +13,7 @@ const AboutUsPage = () => {
           </p>
         </div>
         
-        <div className="  flex flex-col md:flex-row items-center  justify-between w-full mt-16 max-w-screen-xl mx-auto">
+        <div className="  flex flex-col md:flex-row items-center px-8 justify-between w-full mt-16 max-w-screen-xl mx-auto">
           <div className="left flex flex-col w-full  gap-10 ">
             <h1 className="font-bold text-[40px]">Who We Are</h1>
             <p className="lg:w-[80%]">
@@ -27,8 +27,8 @@ const AboutUsPage = () => {
               Read more
             </button>
           </div>
-          <div className="right mt-10 md:mt-0 h-full w-full">
-            <img src={AboutImage} alt="" className="h-full w-full aspect-square" />
+          <div className="right mt-10 md:mt-0 h-full md:w-1/2">
+            <img src={AboutImage} alt="" className=" aspect-square" />
           </div>
         </div>
       </div>

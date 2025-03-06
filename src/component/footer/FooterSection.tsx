@@ -107,7 +107,7 @@ export const FooterSection = () => {
                   <input
                     type="email"
                     placeholder="Enter Your Mail"
-                    className=" p-2 px-9 w-[82%] sm:w-fit bg-white/20 absolute placeholder:underline  focus:outline-none"
+                    className=" p-2 px-9 w-[82%]  sm:w-fit bg-white/20 absolute placeholder:underline  focus:outline-none"
                   />
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
