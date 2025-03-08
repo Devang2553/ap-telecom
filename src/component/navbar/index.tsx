@@ -4,6 +4,7 @@ import { PhoneIcon } from "../../assets/PhoneIcon";
 import "./style.css";
 import { Hamburger } from "../../assets/Hamburger";
 import { CloseIcon } from "../../assets/CloseIcon";
+import { SideIconHomePage } from "../../assets/SideIconHomePage";
 interface NavbarType {
   isopen: boolean;
   setIsopen: any;
@@ -86,10 +87,15 @@ export const Navbar: React.FC<NavbarType> = ({ isopen, setIsopen }) => {
           </a>
         ))}
       </div>
+      <div className=" lg:hidden">
+        <LogoIcon className="w-52" />
+        {/* <SideIconHomePage height="90px" width="auto" className=" aspect-auto bg-black" /> */}
+      </div>
       <a href="tel:+61469827679">
         <button
+          className=" pl-2 pr-2 lg:pl-[44px] lg:pr-[44px] pt-2 pb-2 lg:pt-[12px] lg:pb-[12px] "
           style={{
-            padding: "12px 44px",
+            // padding: "12px 44px",
             //   width: "142px",
             //   height:"48px",
             borderRadius: "50px",
@@ -102,7 +108,7 @@ export const Navbar: React.FC<NavbarType> = ({ isopen, setIsopen }) => {
             border: "0px",
           }}
         >
-          <PhoneIcon /> Call
+          <PhoneIcon /> <span className="hidden lg:block">Call </span>
         </button>
       </a>
 

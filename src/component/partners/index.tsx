@@ -140,7 +140,7 @@ const ImageSlider = ({ array }) => {
         {array?.map((x) => (
           <div
             key={x.id}
-            className="flex items-center justify-center px-2 gap-5 "
+            className="flex items-center justify-center px-2 gap-5    "
           >
             {/* <img src={x.image} alt="" className="w-full h-auto object-cover" /> */}
             {x.image}

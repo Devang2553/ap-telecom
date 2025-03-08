@@ -52,11 +52,11 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="h-full relative  bg-[#0A5EB0]    pt-10  ">
+      <div className="h-full relative  bg-[#0A5EB0]    md:pt-10  ">
         <div className="  relative  pb-10">
           <section className="flex md:flex-row flex-col-reverse    ">
             {/* Left side */}
-            <div className="left-side  md:ml-20 mt-12 md:mt-20 px-7 md:px-0 md:w-[50%]">
+            <div className="left-side  md:ml-20  md:mt-20 px-7 md:px-0 md:w-[50%]">
               <h1 className="font-black text-white text-[24px] text-center md:text-left md:text-[30px]">
                 Welcome to AP Telecom Pty Ltd <br />
                 Your Trusted Partner for Telecommunication <br /> and Security
@@ -76,7 +76,7 @@ const HomePage = () => {
               </p>
             </div>
             {/* right side */}
-            <div className="right-side mx-auto w-fit relative   md:block mt-10 md:mt-0  ">
+            <div className="right-side mx-auto w-fit relative   md:block   ">
               {/* <div className="">
                 <img src={MobileImage} className=" " />
               </div> */}
