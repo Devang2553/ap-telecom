@@ -1,7 +1,7 @@
 export const HiVisionIcon = () => {
   return (
     <svg
-      className="lg:pr-20"
+      className="lg:pr-12 lg:pl-12"
       width="242"
       height="61"
       viewBox="0 0 242 61"

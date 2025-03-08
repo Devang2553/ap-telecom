@@ -14,6 +14,7 @@ import {
 } from "../../assets/index";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import "./partner.css";
 
 const array = [
   {
@@ -106,7 +107,7 @@ const ImageSlider = ({ array }) => {
   const settings = {
     dots: false,
     infinite: true,
-    
+
     speed: 500,
     slidesToShow: 5,
     // fade: true,
@@ -136,15 +137,17 @@ const ImageSlider = ({ array }) => {
     ],
   };
   return (
-    <div className="px-5 md:px-12 pt-7 mt-10 w-full ">
-      <Slider {...settings}>
+    <div className="px-5 md:px-12 pt-7 mt-10 w-full  flex items-center justify-center">
+      <Slider {...settings} className="w-full flex items-center justify-center">
         {array?.map((x) => (
           <div
             key={x.id}
-            className="flex items-center justify-center px-2 gap-5 bg-red-500 w-fit    "
+            className="flex items-center justify-center  w-20  h-full  "
           >
             {/* <img src={x.image} alt="" className="w-full h-auto object-cover" /> */}
-            {x.image}
+            <div className="flex items-center justify-center w-fit h-[40px] ">
+              {x.image}
+            </div>
           </div>
         ))}
       </Slider>

@@ -88,14 +88,14 @@ export const Navbar: React.FC<NavbarType> = ({ isopen, setIsopen }) => {
         ))}
       </div>
       <div className=" lg:hidden">
-        <LogoIcon className="w-52" />
+        <LogoIcon className="w-48 sm:w-52" />
         {/* <SideIconHomePage height="90px" width="auto" className=" aspect-auto bg-black" /> */}
       </div>
       <a href="tel:+61469827679">
         <button
-          // className=" pl-2 pr-2 lg:pl-[44px] lg:pr-[44px] pt-2 pb-2 lg:pt-[12px] lg:pb-[12px] "
+          className=" pl-6 pr-6 lg:pl-[44px] lg:pr-[44px] pt-3 pb-3 lg:pt-[12px] lg:pb-[12px] "
           style={{
-            padding: "12px 44px",
+            // padding: "12px 44px",
             //   width: "142px",
             //   height:"48px",
             borderRadius: "50px",
@@ -108,7 +108,7 @@ export const Navbar: React.FC<NavbarType> = ({ isopen, setIsopen }) => {
             border: "0px",
           }}
         >
-          <PhoneIcon /> <span className="hidden lg:block">Call </span>
+          <PhoneIcon /> <span className="">Call </span>
         </button>
       </a>
 
