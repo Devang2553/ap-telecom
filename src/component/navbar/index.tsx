@@ -93,9 +93,9 @@ export const Navbar: React.FC<NavbarType> = ({ isopen, setIsopen }) => {
       </div>
       <a href="tel:+61469827679">
         <button
-          className=" pl-2 pr-2 lg:pl-[44px] lg:pr-[44px] pt-2 pb-2 lg:pt-[12px] lg:pb-[12px] "
+          // className=" pl-2 pr-2 lg:pl-[44px] lg:pr-[44px] pt-2 pb-2 lg:pt-[12px] lg:pb-[12px] "
           style={{
-            // padding: "12px 44px",
+            padding: "12px 44px",
             //   width: "142px",
             //   height:"48px",
             borderRadius: "50px",

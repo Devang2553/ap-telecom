@@ -298,7 +298,7 @@ const ContactUsPage = () => {
                 </button>
               </form>
             </div>
-            <div className="mt-10 w-full md:w-[48%] h-[550px]">
+            <div className="my-10 w-full md:w-[48%] h-[550px]">
               <iframe
                 width="100%"
                 height="100%"

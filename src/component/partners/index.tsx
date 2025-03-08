@@ -106,6 +106,7 @@ const ImageSlider = ({ array }) => {
   const settings = {
     dots: false,
     infinite: true,
+    
     speed: 500,
     slidesToShow: 5,
     // fade: true,
@@ -140,7 +141,7 @@ const ImageSlider = ({ array }) => {
         {array?.map((x) => (
           <div
             key={x.id}
-            className="flex items-center justify-center px-2 gap-5    "
+            className="flex items-center justify-center px-2 gap-5 bg-red-500 w-fit    "
           >
             {/* <img src={x.image} alt="" className="w-full h-auto object-cover" /> */}
             {x.image}

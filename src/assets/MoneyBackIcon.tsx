@@ -14,7 +14,7 @@ export const MoneyBackIcon = () => {
         height="32"
         rx="4"
         stroke="#141718"
-        stroke-width="2.5"
+        strokeWidth="2.5"
       />
       <circle
         cx="4"
@@ -22,7 +22,7 @@ export const MoneyBackIcon = () => {
         r="4"
         transform="matrix(1 0 0 -1 20.3335 28)"
         stroke="#141718"
-        stroke-width="2.5"
+        strokeWidth="2.5"
       />
       <circle
         cx="2"

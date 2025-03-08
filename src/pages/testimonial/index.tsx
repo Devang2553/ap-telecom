@@ -56,6 +56,14 @@ const TestimonialPage = () => {
         subtitle="Home ideas and design inspiration"
         title="Testimonials"
       />
+      <div className="px-10 w-full">
+      <h2 className="text-[18px] font-semibold text-blue-800 mb-4">
+        TESTIMONIAL
+      </h2>
+      <h3 className="lg:text-[40px] text-xl font-bold mb-24 lg:mb-8 text-gray-800 md:leading-10 break-words">
+        See What Others Have  to Say About Us
+      </h3>
+      </div>
       <div className="mb-40 mt-20">
         {/* <TestimonialSlider testimonials={testimonials} /> */}
         <div className="flex items-center   justify-center gap-5 flex-wrap">
