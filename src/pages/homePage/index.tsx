@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { CloudIcon } from "../../assets";
 import Avatar from "../../assets/avatar12.png";
 import { SideIconHomePage } from "../../assets/SideIconHomePage";
@@ -47,6 +48,8 @@ const testimonials = [
 ];
 
 const HomePage = () => {
+  const [selectedTab, setSelectedTab] = useState(1);
+
   return (
     <>
       <div className="h-full relative  bg-[#0A5EB0]    pt-10  ">
@@ -89,7 +92,9 @@ const HomePage = () => {
                 </div> */}
                   <div>
                     {/* <img src={SideImg} alt=""  /> */}
-                    <SideIconHomePage />
+                    <SideIconHomePage
+                    className="w-72 md:w-auto"
+                    />
                   </div>
                 </div>
               </div>
@@ -106,7 +111,9 @@ const HomePage = () => {
       <AnimatedSection>
         <AboutUsPage />
       </AnimatedSection>
-      <OurService />
+      <div className="mt-20">
+        <OurService selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+      </div>
       {/* <AnimatedSection><Testimonial /></AnimatedSection> */}
       <AnimatedSection>
         <Testimonial testimonials={testimonials} />

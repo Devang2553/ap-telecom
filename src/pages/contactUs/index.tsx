@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AddressIcon } from "../../assets/AddressIcon";
 import { EmailIcon } from "../../assets/EmailIcon";
 import { LockIcon } from "../../assets/LockIcon";
@@ -7,6 +7,9 @@ import { PhoneIcon } from "../../assets/PhoneIcon";
 import ServiceBG from "../../assets/secBG.jpeg";
 import { ShippingIcon } from "../../assets/ShippingIcon";
 import { HeroSection } from "../../component/mainSection";
+import { toast, ToastContainer } from "react-toastify";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 const ContactUsPage = () => {
   const data = [
@@ -14,21 +17,21 @@ const ContactUsPage = () => {
       id: 1,
       icon: <AddressIcon />,
       title: "Address",
-      description: `  234 Hai Trieu, Ho Chi Minh City,\n Viet Nam`,
+      description: ` 27 Minmi Rd, Wallsend NSW 2287`,
     },
     {
       id: 2,
       icon: <PhoneIcon color="black" />,
       title: "Contact Us",
 
-      description: "+84 234 567 890",
+      description: " +61 469 827 679 ",
     },
     {
       id: 3,
       icon: <EmailIcon />,
       title: "Email",
 
-      description: "hello@3legant.com",
+      description: "aptelecomp@gmail.com ",
     },
   ];
   const data2 = [
@@ -95,13 +98,73 @@ const ContactUsPage = () => {
     });
   }, []);
 
+  const [, setSubmitted] = useState(false);
+
+  const notify = () => toast.success("Thank you! Your message has been sent.");
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault(); // Prevent default form submission
+
+    const formData = new FormData(event.target as HTMLFormElement);
+
+    // Replace with your actual Google Form URL
+    const GOOGLE_FORM_URL =
+      "https://docs.google.com/forms/d/e/1FAIpQLSfr7j9NpjL-yyuEPZbjEb5WsYHZy_doDcWPxO6zIlilTyyaPQ/formResponse";
+
+    await fetch(GOOGLE_FORM_URL, {
+      method: "POST",
+      body: formData,
+      mode: "no-cors", // Important to prevent CORS errors
+    });
+
+    setSubmitted(true); // Show success message
+    notify();
+  };
+
+  // Formik setup
+  const formik = useFormik({
+    initialValues: {
+      fullName: "", // Full Name
+      email: "", // Email
+      message: "", // Message
+      phone: "", // Hidden Phone field (if needed)
+    },
+    validationSchema: Yup.object({
+      fullName: Yup.string().required("Full name is required"),
+      email: Yup.string()
+        .email("Invalid email address")
+        .required("Email is required"),
+      message: Yup.string().required("Message is required"),
+    }),
+    onSubmit: async (values, { resetForm }) => {
+      const formData = new FormData();
+      formData.append("entry.124381670", values.fullName);
+      formData.append("entry.319344401", values.email);
+      formData.append("entry.493923015", values.message);
+      formData.append("entry.899288621", values.phone); // Hidden input
+      console.log(formData);
+
+      await fetch(
+        "https://docs.google.com/forms/d/e/1FAIpQLSfr7j9NpjL-yyuEPZbjEb5WsYHZy_doDcWPxO6zIlilTyyaPQ/formResponse",
+        {
+          method: "POST",
+          body: formData,
+          mode: "no-cors",
+        }
+      );
+
+      setSubmitted(true);
+      resetForm(); // Reset form fields after submission
+      notify();
+    },
+  });
+
   return (
     <div className="overflow-x-hidden">
       <HeroSection
         backgroundImage={ServiceBG}
         title="Contacts"
         subtitle="Home ideas and design inspiration"
-        
       />
 
       {/* Services Section */}
@@ -114,7 +177,21 @@ const ContactUsPage = () => {
             {data.map((x) => (
               <div
                 key={x.id}
-                className="bg-[#F3F5F7] min-w-[410px]  h-40 flex flex-col items-center gap-3 justify-center"
+                className="bg-[#F3F5F7] min-w-[410px]  h-40 flex flex-col items-center gap-3 justify-center hover:bg-[#d7dde2] duration-500 cursor-pointer"
+                onClick={() => {
+                  if (x.id == 1) {
+                    window.open(
+                      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.6645226574974!2d151.6645692!3d-32.890986999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b733fad4c34f7c7%3A0xeb9d7d9b17623cbc!2sUnit%2016%2F27%20Minmi%20Rd%2C%20Wallsend%20NSW%202287%2C%20Australia!5e1!3m2!1sen!2sin!4v1741290417369!5m2!1sen!2sin",
+                      "_blank"
+                    );
+                  } else if (x.id == 2) {
+                    window.open("tel:+919876543210");
+                  } else if (x.id == 3) {
+                    window.open(
+                      "mailto:aptelecomp@gmail.com?subject=Hello&body=I want to connect with you."
+                    );
+                  }
+                }}
               >
                 {x.icon}
                 <h2 className="  text-[#0A5EB0] font-bold">
@@ -126,44 +203,99 @@ const ContactUsPage = () => {
           </div>
           <div className="mt-10 flex flex-col md:flex-row  items-center justify-between px-7 md:px-10 ">
             <div className="md:w-[48%] w-full">
-              <form action="POST">
-                <div className="flex flex-col gap-3 ">
-                  <h2 className="text-[#6C7275]  font-bold text-xs">
+              <form onSubmit={formik.handleSubmit} className="space-y-5">
+                <div className="flex flex-col gap-3">
+                  <label className="text-[#6C7275] font-bold text-xs">
                     FULL NAME
-                  </h2>
+                  </label>
                   <input
+                    name="fullName"
                     type="text"
-                    className="w-full h-10  border pl-3 rounded-md outline-none"
+                    className={`w-full h-10 border pl-3 rounded-md outline-none ${
+                      formik.touched.fullName &&
+                      formik.errors.fullName &&
+                      "border-red-500"
+                    }`}
                     placeholder="Your Name"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.fullName}
                   />
+                  {formik.touched.fullName && formik.errors.fullName && (
+                    <p className="text-red-500 text-xs">
+                      {formik.errors.fullName}
+                    </p>
+                  )}
                 </div>
-                <div className="flex flex-col gap-3 mt-5 md:mt-3">
-                  <h2 className="text-[#6C7275]  font-bold text-xs">
+
+                <div className="flex flex-col gap-3">
+                  <label className="text-[#6C7275] font-bold text-xs">
                     EMAIL ADDRESS
-                  </h2>
+                  </label>
                   <input
+                    name="email"
                     type="email"
-                    className="w-full h-10  border pl-3 rounded-md outline-none"
+                    className={`w-full h-10 border pl-3 rounded-md outline-none
+                      ${
+                        formik.touched.email &&
+                        formik.errors.email &&
+                        "border-red-500"
+                      }
+                      `}
                     placeholder="Your Email"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.email}
+                  />
+                  {formik.touched.email && formik.errors.email && (
+                    <p className="text-red-500 text-xs">
+                      {formik.errors.email}
+                    </p>
+                  )}
+                </div>
+
+                <div className="hidden">
+                  <input
+                    name="phone"
+                    type="tel"
+                    className="w-full h-10 border pl-3 rounded-md outline-none"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.phone}
                   />
                 </div>
-                <div className="flex flex-col gap-3 mt-5 md:mt-3">
-                  <h2 className="text-[#6C7275]  font-bold text-xs">MESSAGE</h2>
+
+                <div className="flex flex-col gap-3">
+                  <label className="text-[#6C7275] font-bold text-xs">
+                    MESSAGE
+                  </label>
                   <textarea
+                    name="message"
                     rows={5}
-                    // type="text"
-                    className="w-full   border pl-3 rounded-md outline-none"
+                    className={`w-full border pl-3 rounded-md outline-none ${
+                      formik.touched.message &&
+                      formik.errors.message &&
+                      "border-red-500"
+                    }`}
                     placeholder="Your Message"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.message}
                   />
+                  {formik.touched.message && formik.errors.message && (
+                    <p className="text-red-500 text-xs">
+                      {formik.errors.message}
+                    </p>
+                  )}
                 </div>
-                <div>
-                  <button
-                    className="bg-[#0A5EB0] text-white w-full md:w-fit   rounded-lg mt-10"
-                    style={{ padding: "6px 40px" }}
-                  >
-                    Send Message
-                  </button>
-                </div>
+
+                <button
+                  type="submit"
+                  className="bg-[#0A5EB0] text-white w-full md:w-fit rounded-lg"
+                  style={{ padding: "6px 40px" }}
+                >
+                  Send Message
+                </button>
               </form>
             </div>
             <div className="mt-10 w-full md:w-[48%] h-[550px]">
@@ -174,11 +306,11 @@ const ContactUsPage = () => {
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83937499306!2d77.06889954999999!3d28.5272182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1cb5c1e4828b%3A0x3a7b5b81e3f3b1b5!2sNew%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.6645226574974!2d151.6645692!3d-32.890986999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b733fad4c34f7c7%3A0xeb9d7d9b17623cbc!2sUnit%2016%2F27%20Minmi%20Rd%2C%20Wallsend%20NSW%202287%2C%20Australia!5e1!3m2!1sen!2sin!4v1741290417369!5m2!1sen!2sin"
               ></iframe>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-between w-full px-5 gap-5 my-12">
+          {/* <div className="flex flex-col md:flex-row items-center justify-between w-full px-5 gap-5 my-12">
             {data2.map((x) => (
               <div
                 key={x.id}
@@ -191,7 +323,7 @@ const ContactUsPage = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

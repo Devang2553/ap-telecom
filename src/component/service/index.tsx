@@ -12,7 +12,13 @@ import Service7Image from "../../assets/s7.png";
 import { ServiceCard } from "./ServiceCard";
 import { AnimatedSection } from "../animatedSection";
 
-const OurService = () => {
+const OurService = ({
+  selectedTab,
+  setSelectedTab,
+}: {
+  selectedTab: number;
+  setSelectedTab: React.Dispatch<React.SetStateAction<number>>;
+}) => {
   const serviceArray1 = [
     {
       id: 1,
@@ -121,9 +127,9 @@ const OurService = () => {
     setSelectedTab(type);
   };
 
-  const [selectedTab, setSelectedTab] = useState(1);
+  // const [selectedTab, setSelectedTab] = useState(1);
   return (
-    <div className="flex flex-col items-center justify-center h-fit px-5 md:px-0">
+    <div className="flex flex-col items-center justify-center h-fit px-5 md:px-0 ">
       <div className="h-[63px] border-b-2 border-[#0A5EB0] mb-3">
         <h1 className="font-extrabold text-4xl">Our Service</h1>
       </div>

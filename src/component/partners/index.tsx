@@ -1,12 +1,9 @@
+import Slider from "react-slick";
 import {
-  AddressIcon,
   AjhuaIcon,
   BsaIcon,
-  CloseIcon,
   CloudIcon,
   DownerIcon,
-  EmailIcon,
-  FBIcon,
   FultonHogonIcon,
   HiLookIcon,
   HiVisionIcon,
@@ -15,12 +12,9 @@ import {
   Ventia,
   VisionStream,
 } from "../../assets/index";
-import Logo2 from "../../assets/logo2.png";
-import Logo3 from "../../assets/logo3.png";
-import Logo4 from "../../assets/logo4.png";
-import Logo5 from "../../assets/logo5.png";
-import Logo6 from "../../assets/logo6.png";
-import Logo7 from "../../assets/logo7.png";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+
 const array = [
   {
     id: 1,
@@ -91,18 +85,70 @@ export const Partners = () => {
         <h1 className="font-extrabold text-3xl text-center md:text-[40px] ">
           PROUD MARKETING <span className="text-[#0A5EB0]">PARTNERS</span> WITH
         </h1>
-        <div className="px-5 md:px-16 pt-7 flex  justify-center w-full  gap-3 flex-wrap lg:flex-nowrap md:flex-row items-center ">
-          {array?.map((x) => (
+        <div className="px-5 md:px-12 pt-7 flex mt-10  justify-center w-full  gap-3 flex-wrap lg:flex-nowrap md:flex-row items-center ">
+          {/* {array?.map((x) => (
             <div
               key={x.id}
               className="min-w-80 md:min-w-0  flex items-center justify-center "
             >
               {x.image}
-              {/* <img src={x.image} alt="" /> */}
             </div>
-          ))}
+          ))} */}
+
+          <ImageSlider array={array} />
         </div>
       </div>
     </div>
   );
 };
+
+const ImageSlider = ({ array }) => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    // fade: true,
+
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+  return (
+    <div className="px-5 md:px-12 pt-7 mt-10 w-full ">
+      <Slider {...settings}>
+        {array?.map((x) => (
+          <div
+            key={x.id}
+            className="flex items-center justify-center px-2 gap-5 "
+          >
+            {/* <img src={x.image} alt="" className="w-full h-auto object-cover" /> */}
+            {x.image}
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
+};
+
+export default ImageSlider;

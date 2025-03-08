@@ -1,10 +1,17 @@
-import React from "react";
-
-export const SideIconHomePage = () => {
+export const SideIconHomePage = ({
+  width = "382",
+  height = "400",
+  className,
+}: {
+  width?: string;
+  height?: string;
+  className?: string;
+}) => {
   return (
     <svg
-      width="382"
-      height="400"
+      className={className}
+      width={width}
+      height={height}
       viewBox="0 0 482 400"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -86,23 +86,25 @@ export const Navbar: React.FC<NavbarType> = ({ isopen, setIsopen }) => {
           </a>
         ))}
       </div>
-      <button
-        style={{
-          padding: "12px 44px",
-          //   width: "142px",
-          //   height:"48px",
-          borderRadius: "50px",
-          backgroundColor: "#0A5EB0",
-          color: "white",
-          display: "flex",
-          alignItems: "center",
-          justifyItems: "center",
-          gap: "10px",
-          border: "0px",
-        }}
-      >
-        <PhoneIcon /> Call
-      </button>
+      <a href="tel:+61469827679">
+        <button
+          style={{
+            padding: "12px 44px",
+            //   width: "142px",
+            //   height:"48px",
+            borderRadius: "50px",
+            backgroundColor: "#0A5EB0",
+            color: "white",
+            display: "flex",
+            alignItems: "center",
+            justifyItems: "center",
+            gap: "10px",
+            border: "0px",
+          }}
+        >
+          <PhoneIcon /> Call
+        </button>
+      </a>
 
       {!isopen && (
         <div>

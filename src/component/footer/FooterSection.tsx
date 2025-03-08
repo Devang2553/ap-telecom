@@ -10,7 +10,7 @@ export const FooterSection = () => {
     <div className="md:pt-40">
       <div className="slantdiv bg-gray-900"></div>
       <footer className=" slant bg-gray-900 text-white py-10 bg-skew first ">
-        <div className="unskew max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-10  md:gap-32">
+        <div className="unskew max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-10  justify-evenly">
           {/* Logo and Description */}
           <div className="flex flex-col items-start gap-3 max-w-[400px]  ">
             <div className="aspect-auto">
@@ -34,7 +34,7 @@ export const FooterSection = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="w-full flex flex-col md:flex-row gap-3">
+          <div className="w-fit flex flex-col md:flex-row gap-3">
             <div className="w-full">
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
@@ -62,7 +62,7 @@ export const FooterSection = () => {
             </div>
 
             {/* Community */}
-            <div className="w-full">
+            {/* <div className="w-full">
               <h4 className="text-lg font-semibold mb-4">Community</h4>
               <ul className="space-y-2">
                 <li>
@@ -92,10 +92,10 @@ export const FooterSection = () => {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             {/* Newsletter */}
-            <div className="w-full">
+            {/* <div className="w-full">
               <h4 className="text-lg font-semibold mb-4 underline">
                 Newsletter
               </h4>
@@ -132,12 +132,12 @@ export const FooterSection = () => {
                   Subscribe Now <SendIcon />
                 </button>
               </form>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* Footer Bottom */}
         <div className="unskew border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">
-          © 2021 All Rights Reserved — Primoskit
+          © 2025 All rights Reserved- Ap telecom pty ltd
         </div>
       </footer>{" "}
     </div>
