@@ -1,10 +1,9 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { CloseIcon } from "../../assets/CloseIcon";
+import { Hamburger } from "../../assets/Hamburger";
 import { LogoIcon } from "../../assets/LogoIcon";
 import { PhoneIcon } from "../../assets/PhoneIcon";
 import "./style.css";
-import { Hamburger } from "../../assets/Hamburger";
-import { CloseIcon } from "../../assets/CloseIcon";
-import { SideIconHomePage } from "../../assets/SideIconHomePage";
 interface NavbarType {
   isopen: boolean;
   setIsopen: any;

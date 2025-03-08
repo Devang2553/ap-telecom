@@ -8,25 +8,6 @@ const QuoteForm = () => {
 
   const notify = () => toast.success("Thank you! Your message has been sent.");
 
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault(); // Prevent default form submission
-
-    const formData = new FormData(event.target as HTMLFormElement);
-
-    // Replace with your actual Google Form URL
-    const GOOGLE_FORM_URL =
-      "https://docs.google.com/forms/d/e/1FAIpQLSfr7j9NpjL-yyuEPZbjEb5WsYHZy_doDcWPxO6zIlilTyyaPQ/formResponse";
-
-    await fetch(GOOGLE_FORM_URL, {
-      method: "POST",
-      body: formData,
-      mode: "no-cors", // Important to prevent CORS errors
-    });
-
-    notify();
-    setSubmitted(true); // Show success message
-  };
-
   // Formik setup
   const formik = useFormik({
     initialValues: {

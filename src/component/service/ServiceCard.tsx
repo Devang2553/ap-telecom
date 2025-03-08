@@ -2,8 +2,8 @@ import React from "react";
 
 interface ServiceCardProps {
   image: any;
-  statsNumber: string;
-  statsText: string;
+  statsNumber?: string;
+  statsText?: string;
   title: string;
   description: string;
   reverse: boolean; // Prop to control layout direction
@@ -11,8 +11,6 @@ interface ServiceCardProps {
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({
   image,
-  statsNumber,
-  statsText,
   title,
   description,
   reverse = false, // Prop to control layout direction

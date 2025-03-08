@@ -1,7 +1,6 @@
 import { DribbleIcon } from "../../assets/DribbleIcon";
 import { FBIcon } from "../../assets/FBIcon";
 import { GithubIcon } from "../../assets/GithubIcon";
-import { SendIcon } from "../../assets/SendIcon";
 import { WhiteLogo } from "../../assets/WhiteLogo";
 import { XIcon } from "../../assets/XIcon";
 

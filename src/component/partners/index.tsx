@@ -1,4 +1,6 @@
 import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import {
   AjhuaIcon,
   BsaIcon,
@@ -12,8 +14,6 @@ import {
   Ventia,
   VisionStream,
 } from "../../assets/index";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
 import "./partner.css";
 
 const array = [
@@ -103,7 +103,14 @@ export const Partners = () => {
   );
 };
 
-const ImageSlider = ({ array }) => {
+const ImageSlider = ({
+  array,
+}: {
+  array: {
+    id: number;
+    image: JSX.Element;
+  }[];
+}) => {
   const settings = {
     dots: false,
     infinite: true,

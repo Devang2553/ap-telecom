@@ -1,15 +1,12 @@
+import { useFormik } from "formik";
 import { useEffect, useRef, useState } from "react";
+import { toast } from "react-toastify";
+import * as Yup from "yup";
 import { AddressIcon } from "../../assets/AddressIcon";
 import { EmailIcon } from "../../assets/EmailIcon";
-import { LockIcon } from "../../assets/LockIcon";
-import { MoneyBackIcon } from "../../assets/MoneyBackIcon";
 import { PhoneIcon } from "../../assets/PhoneIcon";
 import ServiceBG from "../../assets/secBG.jpeg";
-import { ShippingIcon } from "../../assets/ShippingIcon";
 import { HeroSection } from "../../component/mainSection";
-import { toast, ToastContainer } from "react-toastify";
-import { useFormik } from "formik";
-import * as Yup from "yup";
 
 const ContactUsPage = () => {
   const data = [
@@ -32,35 +29,6 @@ const ContactUsPage = () => {
       title: "Email",
 
       description: "aptelecomp@gmail.com ",
-    },
-  ];
-  const data2 = [
-    {
-      id: 1,
-      icon: <ShippingIcon />,
-      title: "Free Shipping",
-      description: `Order above $200`,
-    },
-    {
-      id: 2,
-      icon: <MoneyBackIcon />,
-      title: "Money-back",
-
-      description: "30 days guarantee",
-    },
-    {
-      id: 3,
-      icon: <LockIcon />,
-      title: "Secure Payments",
-
-      description: "Secured by Stripe",
-    },
-    {
-      id: 4,
-      icon: <PhoneIcon color="black" size="25" />,
-      title: "24/7 Support",
-
-      description: "Phone and Email support",
     },
   ];
 
@@ -101,25 +69,6 @@ const ContactUsPage = () => {
   const [, setSubmitted] = useState(false);
 
   const notify = () => toast.success("Thank you! Your message has been sent.");
-
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault(); // Prevent default form submission
-
-    const formData = new FormData(event.target as HTMLFormElement);
-
-    // Replace with your actual Google Form URL
-    const GOOGLE_FORM_URL =
-      "https://docs.google.com/forms/d/e/1FAIpQLSfr7j9NpjL-yyuEPZbjEb5WsYHZy_doDcWPxO6zIlilTyyaPQ/formResponse";
-
-    await fetch(GOOGLE_FORM_URL, {
-      method: "POST",
-      body: formData,
-      mode: "no-cors", // Important to prevent CORS errors
-    });
-
-    setSubmitted(true); // Show success message
-    notify();
-  };
 
   // Formik setup
   const formik = useFormik({

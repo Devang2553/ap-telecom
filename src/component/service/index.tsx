@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Service01Image from "../../assets/s001.png";
 import Service02Image from "../../assets/s002.png";
 import Service03Image from "../../assets/s003.png";
@@ -9,8 +8,8 @@ import Service3Image from "../../assets/s3.png";
 import Service4Image from "../../assets/s4.png";
 import Service5Image from "../../assets/s5.png";
 import Service7Image from "../../assets/s7.png";
-import { ServiceCard } from "./ServiceCard";
 import { AnimatedSection } from "../animatedSection";
+import { ServiceCard } from "./ServiceCard";
 
 const OurService = ({
   selectedTab,

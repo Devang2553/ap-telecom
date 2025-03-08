@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { CloudIcon } from "../../assets";
 import Avatar from "../../assets/avatar12.png";
 import { SideIconHomePage } from "../../assets/SideIconHomePage";
 import AboutUsPage from "../../component/about";
@@ -92,9 +91,7 @@ const HomePage = () => {
                 </div> */}
                   <div>
                     {/* <img src={SideImg} alt=""  /> */}
-                    <SideIconHomePage
-                    className="w-72 md:w-auto"
-                    />
+                    <SideIconHomePage className="w-72 md:w-auto" />
                   </div>
                 </div>
               </div>
