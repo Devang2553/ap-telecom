@@ -33,7 +33,7 @@ export const FooterSection = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="w-fit flex flex-col md:flex-row gap-3">
+          {/* <div className="w-fit flex flex-col md:flex-row gap-3">
             <div className="w-full">
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
@@ -60,8 +60,8 @@ export const FooterSection = () => {
               </ul>
             </div>
 
-            {/* Community */}
-            {/* <div className="w-full">
+            Community
+            <div className="w-full">
               <h4 className="text-lg font-semibold mb-4">Community</h4>
               <ul className="space-y-2">
                 <li>
@@ -91,10 +91,10 @@ export const FooterSection = () => {
                   </a>
                 </li>
               </ul>
-            </div> */}
+            </div>
 
-            {/* Newsletter */}
-            {/* <div className="w-full">
+            Newsletter
+            <div className="w-full">
               <h4 className="text-lg font-semibold mb-4 underline">
                 Newsletter
               </h4>
@@ -131,8 +131,8 @@ export const FooterSection = () => {
                   Subscribe Now <SendIcon />
                 </button>
               </form>
-            </div> */}
-          </div>
+            </div>
+          </div> */}
         </div>
         {/* Footer Bottom */}
         <div className="unskew border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">

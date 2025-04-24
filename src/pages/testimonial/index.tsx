@@ -5,46 +5,46 @@ import QuoteIcon2 from "/Quote2.png";
 
 const testimonials = [
   {
-    name: "Jhon Smith",
-    role: "Web Developer",
+    name: "Sarah M.",
+    role: "Homeowner, Sydney",
     image: "https://via.placeholder.com/50",
     feedback:
-      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer.",
+      "AP Telecom Pty Ltd completely transformed the internet experience in our home. Their WiFi setup is flawless, and we’ve never had better connectivity. Highly professional and reliable service!",
   },
   {
-    name: "Md Shamim Hossain",
-    role: "UI/UX Designer",
+    name: "Mark T.",
+    role: "Small Business Owner",
     image: "https://via.placeholder.com/50",
     feedback:
-      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer.",
+      "I needed a trustworthy team to install security cameras and alarms in my store. AP Telecom delivered on time, explained everything clearly, and the system works perfectly. Total peace of mind now!",
   },
   {
-    name: "Jesica Lirona",
-    role: "Front End Developer",
+    name: "Anita R.",
+    role: "Property Manager",
     image: "https://via.placeholder.com/50",
     feedback:
-      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer.",
+      "The team at AP Telecom are experts at what they do. From data cabling to intercom systems, everything was handled smoothly and professionally. Highly recommend them for any property!",
   },
   {
-    name: "Emily Watson",
-    role: "Backend Developer",
+    name: "David L.",
+    role: "IT Manager, Corporate Office",
     image: "https://via.placeholder.com/50",
     feedback:
-      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer.",
+      "Their fibre optic installation was fast, clean, and efficient. They even helped optimize our internal network. Couldn’t be happier with their technical expertise!",
   },
   {
-    name: "Michael Scott",
-    role: "Project Manager",
+    name: "Priya K.",
+    role: "Café Owner",
     image: "https://via.placeholder.com/50",
     feedback:
-      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer.",
+      "Thanks to AP Telecom, we now have a strong WiFi signal throughout our café and a CCTV system that lets us monitor everything from our phones. Great investment and great team!",
   },
   {
-    name: "Michael Scott",
-    role: "Project Manager",
+    name: "Thomas W.",
+    role: "New Home Builder",
     image: "https://via.placeholder.com/50",
     feedback:
-      "Lorem Ipsum is a simply dummy text of the printing and type settings for has been the industry's standard dummy text the ever since unknown printer.",
+      "We hired AP Telecom for both wifi and security camera setup in our new building. From phone line to alarm installation, every service was handled with professionalism. Exceptional service from start to finish.",
   },
 ];
 
@@ -57,12 +57,12 @@ const TestimonialPage = () => {
         title="Testimonials"
       />
       <div className="px-10 w-full">
-      <h2 className="text-[18px] font-semibold text-blue-800 mb-4">
-        TESTIMONIAL
-      </h2>
-      <h3 className="lg:text-[40px] text-xl font-bold mb-24 lg:mb-8 text-gray-800 md:leading-10 break-words">
-        See What Others Have  to Say About Us
-      </h3>
+        <h2 className="text-[18px] font-semibold text-blue-800 mb-4">
+          TESTIMONIAL
+        </h2>
+        <h3 className="lg:text-[40px] text-xl font-bold mb-24 lg:mb-8 text-gray-800 md:leading-10 break-words">
+          See What Others Have to Say About Us
+        </h3>
       </div>
       <div className="mb-40 mt-20">
         {/* <TestimonialSlider testimonials={testimonials} /> */}

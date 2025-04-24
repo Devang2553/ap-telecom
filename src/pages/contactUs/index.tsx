@@ -108,6 +108,37 @@ const ContactUsPage = () => {
     },
   });
 
+
+
+    useEffect(() => {
+    const initMap = () => {
+      const wallsend = { lat: -32.898874, lng: 151.636672 };
+      const map = new window.google.maps.Map(document.getElementById("map"), {
+        zoom: 13,
+        center: wallsend,
+      });
+
+      new window.google.maps.Marker({
+        position: wallsend,
+        map,
+        title: "Your Custom Location",
+        icon: {
+          url: "https://yourdomain.com/path-to-your-icon.png", // Replace with your icon URL
+          scaledSize: new window.google.maps.Size(50, 50), // Resize icon
+        },
+      });
+    };
+
+    if (!window.google) {
+      const script = document.createElement("script");
+      script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY`;
+      document.head.appendChild(script);
+      script.onload = initMap;
+    } else {
+      initMap();
+    }
+  }, []);
+
   return (
     <div className="overflow-x-hidden">
       <HeroSection
@@ -255,7 +286,7 @@ const ContactUsPage = () => {
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.6645226574974!2d151.6645692!3d-32.890986999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b733fad4c34f7c7%3A0xeb9d7d9b17623cbc!2sUnit%2016%2F27%20Minmi%20Rd%2C%20Wallsend%20NSW%202287%2C%20Australia!5e1!3m2!1sen!2sin!4v1741290417369!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53599.55364148769!2d151.61607222062514!3d-32.8989058445723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b7338dc137b0a09%3A0x5017d681632f620!2sWallsend%20NSW%202287%2C%20Australia!5e0!3m2!1sen!2sin!4v1745512461028!5m2!1sen!2sin"
               ></iframe>
             </div>
           </div>

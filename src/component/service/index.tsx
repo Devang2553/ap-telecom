@@ -1,11 +1,12 @@
 import Service01Image from "../../assets/s001.png";
-import Service02Image from "../../assets/s002.png";
-import Service03Image from "../../assets/s003.png";
-import Service04Image from "../../assets/s004.png";
-import Service1Image from "../../assets/s1.png";
-import Service2Image from "../../assets/s2.png";
+import Service02Image from "../../assets/SecurityAlarm.jpg";
+import Service03Image from "../../assets/audioVideoIntercom.png";
+import Service04Image from "../../assets/DataAndTelecomCabling.webp";
+import Service1Image from "../../assets/TelecommuncationAssistant.jpg";
+import Service2Image from "../../assets/WifiAccessPoint.jpg";
 import Service3Image from "../../assets/s3.png";
-import Service4Image from "../../assets/s4.png";
+import PhoneRepair from "../../assets/PhoneRepair.png";
+import Service4Image from "../../assets/InternetConnectionRepair.jpg";
 import Service5Image from "../../assets/s5.png";
 import Service7Image from "../../assets/s7.png";
 import { AnimatedSection } from "../animatedSection";
@@ -42,7 +43,7 @@ const OurService = ({
       title: "Phone Line Repair",
       description:
         " Phone line issues can disrupt both personal and professional communication. We quickly diagnose problems like static, outages, or poor call quality and restore your lines to full functionality. With expertise in analog and digital systems, our services ensure crystal-clear and reliable communication.",
-      image: Service3Image,
+      image: PhoneRepair,
       years: "25",
       reverse: false,
     },
@@ -60,7 +61,7 @@ const OurService = ({
       title: "Data Cabling",
       description:
         "High-quality data cabling is the backbone of any modern network. We design and implement structured cabling systems that support efficient data transmission, future scalability, and ease of maintenance. Perfect for smart homes, data centers, and office environments, our cabling ensures long-term reliability.",
-      image: Service5Image,
+      image: Service3Image,
       years: "25",
       reverse: false,
     },
@@ -69,7 +70,7 @@ const OurService = ({
       title: "Fibre Optic Service",
       description:
         " For unparalleled speed and reliability, we specialize in fibre optic installations. This state-of-the-art technology supports high-speed data transfer, making it an excellent choice for businesses and individuals with heavy internet usage. From planning and installation to maintenance, we handle every detail to deliver a cutting-edge network.",
-      image: Service3Image,
+      image: Service5Image,
       years: "25",
       reverse: true,
     },

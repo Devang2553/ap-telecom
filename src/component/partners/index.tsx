@@ -15,6 +15,7 @@ import {
   VisionStream,
 } from "../../assets/index";
 import "./partner.css";
+import BoschIcon from "../../assets/partners/BoschIcon";
 
 const array = [
   {
@@ -56,6 +57,10 @@ const array = [
   {
     id: 10,
     image: <FultonHogonIcon />,
+  },
+  {
+    id: 11,
+    image: <BoschIcon />,
   },
 ];
 
