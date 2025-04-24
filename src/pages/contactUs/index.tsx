@@ -113,7 +113,9 @@ const ContactUsPage = () => {
     useEffect(() => {
     const initMap = () => {
       const wallsend = { lat: -32.898874, lng: 151.636672 };
-      const map = new window.google.maps.Map(document.getElementById("map"), {
+      const mapElement = document?.getElementById("map");
+      if (!mapElement) return;
+      const map = new window.google.maps.Map(mapElement, {
         zoom: 13,
         center: wallsend,
       });
